@@ -1,5 +1,4 @@
 BUILD    := build
-MARKDOWN := $(BUILD)/source.md
 HTML     := $(BUILD)/spec.html
 
 SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
@@ -10,11 +9,8 @@ SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(MARKDOWN): $(BUILD) $(SOURCE_LIST)
-	cat $(SOURCE_LIST) > $(MARKDOWN)
-
-$(HTML): $(MARKDOWN)
-	pandoc $(MARKDOWN) -f markdown -t html -s -o $(HTML)
+$(HTML): $(BUILD) $(SOURCE_LIST)
+	pandoc $(SOURCE_LIST) -f markdown -t html -s -o $(HTML)
 
 all: $(HTML)
 
