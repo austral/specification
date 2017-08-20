@@ -41,7 +41,7 @@ None.
 The *unit type*, denoted `unit`, is a type that only allows one value. The *unit
 constant* is `nil`.
 
-#### Boolean
+#### Boolean {#type:boolean}
 
 ##### Type Specifier
 
