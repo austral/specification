@@ -2,29 +2,78 @@
 
 ## Control Flow
 
-### `progn`
+### `progn` {#op:progn}
 
 #### Syntax
 
+```
+(progn <exp>*) ⇒ <result>
+```
+
 #### Parameters and Values
+
+`exp`
+: A form.
+
+`result`
+: If the `progn` expression is non-empty, the result of evaluting the last
+  `exp`. If the `progn` expression is empty, `nil`.
 
 #### Description
 
+The progn special operator evaluates every form in the order in which they
+appear, discarding every value but the last. The last value is returned.
+
+If progn appears as a toplevel form (for example, as the result of
+macroexpansion), all of its forms are considered toplevel forms.
+
 #### Examples
 
+```
+(progn)       ⇒ nil
+(progn 1 2 3) ⇒ 3
+```
+
 #### See Also
+
+None.
 
 ### `if` {#op:if}
 
 #### Syntax
 
+```
+(if <test> <consequent> <alternate>) ⇒ <result>
+```
+
 #### Parameters and Values
 
+`test`
+: An expression of type [`boolean`](#type:boolean).
+
+`consequent`
+: An expression that will be evaluated if condition evaluates to `true`.
+
+`alternate`
+: An expression that will be evaluated if condition evaluates to `false`.
+
+`result`
+: The value of evaluating either the `consequent` or `alternate` expression.
+
 #### Description
+
+The `if` special operator evaluates the `test` expression unconditionally. If
+the test was true, it evaluates the `consequent` and returns it. Otherwise, it
+evaluates the `alternate`. Both `consequent` and `alternate` expressions must be
+of the same type.
 
 #### Examples
 
 #### See Also
+
+- [`cond`](#op:cond)
+- [`when`](#op:when)
+- [`unless`](#op:unless)
 
 ### `cond` {#op:cond}
 
@@ -74,7 +123,7 @@
 
 #### See Also
 
-### `when`
+### `when` {#op:when}
 
 #### Syntax
 
@@ -86,7 +135,7 @@
 
 #### See Also
 
-### `unless`
+### `unless` {#op:unless}
 
 #### Syntax
 
@@ -102,7 +151,40 @@
 
 ### `let`
 
-### `defconstant`
+### `defconstant` {#op:defconstant}
+
+#### Syntax
+
+```
+(defconstant <name> <value>
+  [<documentation>])
+```
+
+#### Parameters and Values
+
+`name`
+: The name of the constant, a symbol.
+
+`value`
+: An expression that evaluates to the constant's value.
+
+`documentation`
+: An optional documentation string.
+
+#### Description
+
+The defconstant operator defines a constant value.
+
+#### Examples
+
+```
+(defconstant pi 3.141592653589793
+  "The ratio of a circle's circumference to its diameter.")
+```
+
+#### See Also
+
+None.
 
 ## Assignment
 
