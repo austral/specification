@@ -120,11 +120,41 @@
 
 ### `deftype`
 
-### `defmagnitude`
+### `defmagnitude` {#op:defmagnitude}
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
 
 ### `defunit`
 
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
 ### `the`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
 
 ## Macros
 
@@ -166,7 +196,7 @@
 
 ## Features
 
-### `provide`
+### `provide` {#op:provide}
 
 #### Syntax
 
@@ -245,3 +275,5 @@ If no `test` expression evaluates to true, the expression is replaced with the
 #### Examples
 
 #### See Also
+
+- [provide](#op:provide)
