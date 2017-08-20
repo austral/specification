@@ -206,25 +206,81 @@ None.
 
 #### Syntax
 
+```
+(defmagnitude <name>
+  [<documentation>]
+  (:canonical <unit>)
+```
+
 #### Parameters and Values
+
+`name`
+: The name of the magnitude.
+
+`documentation`
+: An optional documentation string.
+
+`unit`
+: The canonical unit of this magnitude, a unit expression.
 
 #### Description
 
+The `defmagnitude` special operator defines a magntiude. A magnitude represents
+a physical property that can be quantified, e.g. length or mass. Magnitudes can
+be represented by different units.
+
 #### Examples
+
+```
+(defmagnitude mass
+  "The mass of an object."
+  (:canonical gram))
+```
 
 #### See Also
 
-### `defunit`
+- [`defunit`](#op:defunit)
+
+### `defunit` {#op:defunit}
 
 #### Syntax
 
+```
+(defunit <name>
+  [<documentation>]
+  (:magnitude <magnitude>)
+  [(:nicknames <nickname>+)]
+  (:factor <factor>))
+```
+
 #### Parameters and Values
 
 #### Description
 
+The `defunit` special operator defines a new unit of a specific magnitude.
+
+Units can have multiple nicknames, for instance, `m` can be defined as a
+nickname for `meter`.
+
 #### Examples
 
+```
+(defunit meter
+  "An SI meter."
+  (:magnitude length)
+  (:nicknames m)
+  (:factor 1.0))
+
+(defunit foot
+  "A foot."
+  (:magnitude length)
+  (:nicknames ft)
+  (:factor 3.281))
+```
+
 #### See Also
+
+- [`defmagnitude`](#op:defmagnitude)
 
 ### `the`
 
