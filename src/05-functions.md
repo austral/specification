@@ -19,8 +19,8 @@ and codomain are unsigned 64-bit integers.
       (+ (fibonacci (- n 1))
          (fibonacci (- n 2)))))
 
-(fibonacci 5) => 5
-(fibonacci 30) => 832040
+(fibonacci 5)  ⇒ 5
+(fibonacci 30) ⇒ 832040
 ```
 
 A more extensively documented, equivalent function:
