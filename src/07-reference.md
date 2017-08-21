@@ -278,6 +278,8 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 ## Arithmetic Operations
 
+## Bitwise Operations
+
 ## Assignment
 
 ### `set`
