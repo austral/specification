@@ -202,13 +202,31 @@ None.
 
 #### Syntax
 
+```
+(or <lhs> <rhs>)
+```
+
 #### Parameters and Values
+
+`lhs`, `rhs`
+: An expression of type [`boolean`](#type:boolean).
 
 #### Description
 
+The `or` function evaluates to `true` if either argument is `true`.
+
 #### Examples
 
+```
+(or true false)  ⇒ true
+(or true true)   ⇒ true
+(or false false) ⇒ false
+```
+
 #### See Also
+
+- [`and`](#op:and)
+- [`not`](#op:not)
 
 ### `not` {#op:not}
 
