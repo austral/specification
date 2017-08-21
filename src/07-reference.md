@@ -87,42 +87,6 @@ of the same type.
 
 #### See Also
 
-### `and`
-
-#### Syntax
-
-#### Parameters and Values
-
-#### Description
-
-#### Examples
-
-#### See Also
-
-### `or`
-
-#### Syntax
-
-#### Parameters and Values
-
-#### Description
-
-#### Examples
-
-#### See Also
-
-### `not`
-
-#### Syntax
-
-#### Parameters and Values
-
-#### Description
-
-#### Examples
-
-#### See Also
-
 ### `when` {#op:when}
 
 #### Syntax
@@ -219,6 +183,46 @@ The defconstant operator defines a constant value.
 #### See Also
 
 None.
+
+## Boolean Operations
+
+### `and`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `or`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `not`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+## Arithmetic Operations
 
 ## Assignment
 
