@@ -127,25 +127,59 @@ of the same type.
 
 #### Syntax
 
+```
+(when <test>
+  <body>*)
+```
+
 #### Parameters and Values
 
+`test`
+: An expression of type [`boolean`](#type:boolean).
+
+`body`
+: Forms evaluated as an [implicit `progn`](#g:implicit-progn).
+
 #### Description
+
+The `when` operator evaluates `body` if `test` evaluates to `true`.
+
+The return value is always `nil`.
 
 #### Examples
 
 #### See Also
+
+- [`unless`](#op:unless)
 
 ### `unless` {#op:unless}
 
 #### Syntax
 
+```
+(unless <test>
+  <body>*)
+```
+
 #### Parameters and Values
 
+`test`
+: An expression of type [`boolean`](#type:boolean).
+
+`body`
+: Forms evaluated as an [implicit `progn`](#g:implicit-progn).
+
 #### Description
+
+The `when` operator evaluates `body` if `test` evaluates to `false`.
+
+The return value is always `nil`.
 
 #### Examples
 
 #### See Also
+
+- [`when`](#op:when)
 
 ## Bindings
 
