@@ -210,17 +210,33 @@ None.
 
 #### See Also
 
-### `not`
+### `not` {#op:not}
 
 #### Syntax
 
+```
+(not <form>)
+```
+
 #### Parameters and Values
+
+`form`
+: An expression of type [`boolean`](#type:boolean).
 
 #### Description
 
+The `not` function returns `true` if its argument is false, `false` otherwise.
+
 #### Examples
 
+```
+(not true) ⇒ false
+```
+
 #### See Also
+
+- [`and`](#op:and)
+- [`or`](#op:or)
 
 ## Arithmetic Operations
 
