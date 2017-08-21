@@ -186,7 +186,7 @@ None.
 
 ## Boolean Operations
 
-### `and`
+### `and` {#op:and}
 
 #### Syntax
 
@@ -198,7 +198,7 @@ None.
 
 #### See Also
 
-### `or`
+### `or` {#op:and}
 
 #### Syntax
 
