@@ -37,6 +37,10 @@ Additionally, the following code is invalid, because `x` has been assigned to `y
 
 ## Units of Measure
 
+Units of measure and the magnitudes they measure are defined with
+the [`defunit`](#op:defunit) and [`defmagnitude`](#op:defmagnitude) special
+operators.
+
 ## Type Equality
 
 ## Built-in Types
