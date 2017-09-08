@@ -35,6 +35,33 @@ Where:
   its corresponding parameter was supplied an argument at the call site, and
   `false` when the default value was used instead.
 
+Note that, when a keyword parameter defines a default value, and the
+corresponding function is called without supplying an argument to that
+parameter, the default value form is evaluated at the call site. That is, given
+a function definition:
+
+```
+(defun add (&key (lhs i64) (rhs i64 0)) i64
+  (+ lhs rhs))
+```
+
+The following call:
+
+```
+(add 1)
+```
+
+Is equivalent to writing:
+
+```
+(add 1 0)
+```
+
+This precludes a class of defects where, in languages where default parameter
+are evaluated once and treated as references, mutiple calls to a function with
+the same arguments will produce different results by (potentially unwittingly)
+mutating a default parameter value.
+
 ### Examples
 
 Below is an implementation of the recursive Fibonacci function. Both the range
