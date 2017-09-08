@@ -294,7 +294,7 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 ## Types
 
-### `deftype`
+### `deftype` {#op:deftype}
 
 ### `defmagnitude` {#op:defmagnitude}
 
