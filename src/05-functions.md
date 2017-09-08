@@ -37,8 +37,8 @@ Where:
 
 Note that, when a keyword parameter defines a default value, and the
 corresponding function is called without supplying an argument to that
-parameter, the default value form is evaluated at the call site. That is, given
-a function definition:
+parameter, the default argument form is evaluated at the call site. That is,
+given a function definition:
 
 ```
 (defun add (&key (lhs i64) (rhs i64 0)) i64
@@ -57,10 +57,10 @@ Is equivalent to writing:
 (add :lhs 1 :rhs 0)
 ```
 
-This precludes a class of defects where, in languages where default parameter
-are evaluated once and treated as references, mutiple calls to a function with
-the same arguments will produce different results by (potentially unwittingly)
-mutating a default parameter value.
+This precludes a class of defects where, in languages where default argument
+expressions are evaluated once and treated as references, mutiple calls to a
+function with the same arguments will produce different results by (potentially
+unwittingly) mutating a default argument value.
 
 ### Examples
 
