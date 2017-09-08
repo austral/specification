@@ -41,71 +41,69 @@ Additionally, the following code is invalid, because `x` has been assigned to `y
 
 ## Built-in Types
 
-### Scalar Types
+### Unit
 
-#### Unit
-
-##### Type Specifier
+#### Type Specifier
 
 ```
 unit
 ```
 
-##### Parameters
+#### Parameters
 
 None.
 
-##### Description
+#### Description
 
 The *unit type*, denoted `unit`, is a type that only allows one value. The *unit
 constant* is `nil`.
 
-#### Boolean {#type:boolean}
+### Boolean {#type:boolean}
 
-##### Type Specifier
+#### Type Specifier
 
 ```
 boolean
 ```
 
-##### Parameters
+#### Parameters
 
 None.
 
-##### Description
+#### Description
 
 The type of Boolean values, denoted `boolean`, has two values: the constants
 `true` and `false.
 
-#### Characters
+### Characters
 
-##### Type Specifier
+#### Type Specifier
 
 ```
 character
 ```
 
-##### Parameters
+#### Parameters
 
 None.
 
-##### Description
+#### Description
 
 The character type, denoted `character`, represents a Unicode scalar value.
 
-#### Integers
+### Integers
 
-##### Type Specifier
+#### Type Specifier
 
 ```
 {u8|u16|u32|u64|usize|i8|i16|i32|i64|isize}
 ```
 
-##### Parameters
+#### Parameters
 
 None.
 
-##### Description
+#### Description
 
 Austral defines eight integer types, from bytes to 64-bit-wide integers, each in
 unsigned and signed variants. The integer types are denoted by the letter `u`
@@ -117,12 +115,12 @@ represents an integer large enough to hold the size of the largest possible
 array in the machine's memory. The type denoted by `isize` is its signed
 variant.
 
-#### Real Numbers
+### Real Numbers
 
 Austral supports two approximations of real numbers: IEEE 754 floating point and
 fixed point numbers.
 
-##### IEEE 754 Floating Point Numbers
+#### IEEE 754 Floating Point Numbers
 
 ###### Type Specifier
 
@@ -140,7 +138,7 @@ The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-##### Fixed Point Numbers
+#### Fixed Point Numbers
 
 ###### Type Specifier
 
@@ -160,15 +158,15 @@ point number.
 
 [TBD]
 
-#### Complex Numbers
+### Complex Numbers
 
-##### Type Specifier
+#### Type Specifier
 
 ```
 (complex <real> <imaginary>)
 ```
 
-##### Parameters
+#### Parameters
 
 `real`
 : The type specifier of the real part.
@@ -176,40 +174,38 @@ point number.
 `imaginary`
 : The type specifier of the imaginary part.
 
-##### Description
+#### Description
 
 Both `real` and `imaginary` type parameters MUST denote the same real-number
 type.
 
-#### Pointers
+### Pointers
 
-### Aggregate Types
+### Arrays
 
-#### Arrays
+#### Fixed-Size Arrays
 
-##### Fixed-Size Arrays
+#### Fixed-Capacity Arrays
 
-##### Fixed-Capacity Arrays
+#### Resizeable Arrays
 
-##### Resizeable Arrays
+### Tuples
 
-#### Tuples
-
-##### Type Specifier
+#### Type Specifier
 
 ```
 (tuple <t_1> <t_2> ... <t_n>)
 ```
 
-##### Parameters
+#### Parameters
 
 `t_1`, `t_2`, ..., `t_n`
 : Arbitrary type specifiers.
 
-##### Description
+#### Description
 
 A tuple is a heterogeneous, fixed-size collection of values.
 
-#### Records
+### Records
 
-#### Unions
+### Unions
