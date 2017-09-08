@@ -296,6 +296,42 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 ### `deftype` {#op:deftype}
 
+### `defrecord` {#op:defrecord}
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+An undocumented record definition:
+
+```
+(defrecord point ()
+  ((x f64)
+   (y f64)))
+```
+
+The same record definition, lightly documented:
+
+```
+(defrecord point ()
+  "Represents a point in R^2."
+  ((x f64)
+   (y f64)))
+```
+
+The same record definition, fully documented:
+
+```
+(defrecord point ()
+  "Represents a point in R^2."
+  ((x f64 "The X-coordinate.")
+   (y f64 "The Y-coordinate.")))
+```
+
 ### `defmagnitude` {#op:defmagnitude}
 
 #### Syntax
