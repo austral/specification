@@ -27,13 +27,13 @@ Where:
 : A concrete type specifier.
 
 `default`
-: For keyword arguments, an expression which will be used to provide a default
+: For keyword parameters, an expression which will be used to provide a default
   value.
 
 `supplied`
 : The name of a [`boolean`](#type:boolean) variable whose value is `true` when
-  its corresponding argument was supplied a value at the call site, and `false`
-  when the default value was used instead.
+  its corresponding parameter was supplied an argument at the call site, and
+  `false` when the default value was used instead.
 
 ### Examples
 
