@@ -300,9 +300,42 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 #### Syntax
 
+```
+(defrecord <name> (<param>*)
+  [<docstring>]
+  [(<slot>*)])
+
+slot := (<slot> <type> <slot-docstring>)
+```
+
 #### Parameters and Values
 
+`name`
+: The record name, a symbol.
+
+`param`
+: A type parameter name.
+
+`docstring`
+: An optional documentation string.
+
+`slot`
+: The slot name, a symbol.
+
+`type`
+: The slot type, a type specifier, potentially including any defined type
+  parameters.
+
+`slot-docstring`
+: An optional documentation string for the slot.
+
 #### Description
+
+The `defrecord` special operator defines a new [record type](#type:record).
+
+If the definition omits the slot list, the record is assumed to be a
+forward-declared record. No operations can be defined on it until the complete
+definition is provided.
 
 #### Examples
 
