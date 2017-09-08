@@ -213,7 +213,7 @@ type.
 
 A tuple is a heterogeneous, fixed-size collection of values.
 
-### Records
+### Records {#type:record}
 
 #### Type Specifier
 
