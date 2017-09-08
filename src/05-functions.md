@@ -48,13 +48,13 @@ a function definition:
 The following call:
 
 ```
-(add 1)
+(add :lhs 1)
 ```
 
 Is equivalent to writing:
 
 ```
-(add 1 0)
+(add :lhs 1 :rhs 0)
 ```
 
 This precludes a class of defects where, in languages where default parameter
