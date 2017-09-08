@@ -6,6 +6,35 @@
 operator. In a concrete function definition, the types of all parameters and the
 return type MUST be specified and MUST be concrete types.
 
+### Concrete Function Parameter Lists
+
+The parameter list of a concrete function is of the form:
+
+```
+(<named-parameter>* [&key <keyword-parameter>*))
+
+named-parameter := (<name> <type>)
+
+keyword-parameter := (<name> <type> [<default> [<supplied>]])
+```
+
+Where:
+
+`name`
+: The name of a parameter, a symbol.
+
+`type`
+: A concrete type specifier.
+
+`default`
+: For keyword arguments, an expression which will be used to provide a default
+  value.
+
+`supplied`
+: The name of a [`boolean`](#type:boolean) variable whose value is `true` when
+  its corresponding argument was supplied a value at the call site, and `false`
+  when the default value was used instead.
+
 ### Examples
 
 Below is an implementation of the recursive Fibonacci function. Both the range
