@@ -212,4 +212,22 @@ A tuple is a heterogeneous, fixed-size collection of values.
 
 ### Records
 
+#### Type Specifier
+
+```
+<name>
+```
+
+#### Parameters
+
+`name`
+: The name of the record.
+
+#### Description
+
+Record types are a heterogeneous, fixed-size collection of values where each
+value is identified by a symbol.
+
+Records are defined with the [`defrecord`](#op:defrecord) operator.
+
 ### Unions
