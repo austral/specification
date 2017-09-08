@@ -43,6 +43,9 @@ operators.
 
 ## Type Equality
 
+Type equality is structural, except for records and unions, which use nominal
+equality.
+
 ## Built-in Types
 
 ### Unit
