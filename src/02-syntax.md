@@ -39,7 +39,7 @@ The string `-0` is equivalent to `0`.
 
 #### Floating-Point Numbers
 
-Floating point literals are string matched by the regular expression:
+Floating point literals are strings matched by the regular expression:
 
 ```
 ^[+|-]?0*(\d+|\d{1,3}(,\d{3})*)\.([f|d]?[0-9]+)([Ee][+-]?[0-9]+)?$
