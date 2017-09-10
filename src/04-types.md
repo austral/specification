@@ -82,22 +82,6 @@ None.
 The type of Boolean values, denoted `boolean`, has two values: the constants
 `true` and `false.
 
-### Characters
-
-#### Type Specifier
-
-```
-character
-```
-
-#### Parameters
-
-None.
-
-#### Description
-
-The character type, denoted `character`, represents a Unicode scalar value.
-
 ### Integers
 
 #### Type Specifier
