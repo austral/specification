@@ -170,7 +170,7 @@ point number.
 Both `real` and `imaginary` type parameters MUST denote the same real-number
 type.
 
-### Pointers
+### Pointers {#type:pointer}
 
 #### Syntax
 
