@@ -6,9 +6,61 @@
 
 ### Numbers
 
+#### Base-10 Integers
+
+Integer literals are strings matched by the regular expression:
+
+```
+^[+|-]?0*(\d+|\d{1,3}(,\d{3})*)$
+```
+
+Note that, to aid human-readability, commas can appear in integer literals as
+the thousands separator.
+
+Examples:
+
+```
+123
++123
+-45
+123,532
+-1,000,231
+-0000000001,000,000
+```
+
+#### Floating-Point Numbers
+
+#### Fixed-Point Numbers
+
+#### Complex Numbers
+
 ### Tuples
 
+Tuple literals use curly braces, where the tuple elements are arbitrary
+whitespace-separated forms.
+
+Examples:
+
+```
+{1 2 3}
+{0 3.14 "test"}
+{} ;; The empty tuple
+```
+
 ### Arrays
+
+Array literals use square brackets, and array elements are arbitrary
+whitespace-separated forms.
+
+Examples:
+
+```
+[1 2 3]
+[0.0 0.0 0.0]
+```
+
+The type of an array literal is a [fixed-size array](#type:fixed-size-array)
+with the same number of elements as in the literal form.
 
 ### Characters
 
