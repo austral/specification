@@ -1,12 +1,12 @@
 # Functions
 
-## Concrete Functions
+## Concrete Functions {#fn:concrete}
 
 *Concrete functions* are defined using the [`defun`](#op:defun) special
 operator. In a concrete function definition, the types of all parameters and the
 return type MUST be specified and MUST be concrete types.
 
-### Concrete Function Parameter Lists
+### Concrete Function Parameter Lists {#fn:concrete-param-list}
 
 The parameter list of a concrete function is of the form:
 
