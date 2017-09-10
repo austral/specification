@@ -105,8 +105,6 @@ Examples:
 The type of an array literal is a [fixed-size array](#type:fixed-size-array)
 with the same number of elements as in the literal form.
 
-### Characters
-
 ### Strings
 
 String literals are delimited by double quote (`"`) characters.
