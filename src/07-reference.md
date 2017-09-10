@@ -548,6 +548,28 @@ it on the heap, and returns a [pointer](#type:pointer) to it.
 
 ### `load`
 
+#### Syntax
+
+```
+(load <pointer-or-reference>)
+```
+
+#### Parameters and Values
+
+`pointer-or-reference`
+: A value of type [pointer](#type:pointer) or [reference](#type:reference).
+
+#### Description
+
+The `load` operator takes a pointer or reference and returns the pointed-to
+value.
+
+#### Examples
+
+```
+(load (allocate 10)) ⇒ 10
+```
+
 ### `borrowing`
 
 ## Features
