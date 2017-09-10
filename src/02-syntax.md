@@ -1,8 +1,12 @@
 # Syntax
 
+This section describes Austral's syntax.
+
 ## Symbols
 
 ## Literals
+
+This section describes literal representations of Austral values.
 
 ### Numbers
 
