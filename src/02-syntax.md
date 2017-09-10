@@ -34,6 +34,16 @@ Examples:
 
 #### Complex Numbers
 
+Complex number literals use the prefix `#J` (pronounced "sharpsign J") a list
+form whose elements are the real and imaginary parts of the number.
+
+Examples:
+
+```
+#J(0 0)
+#J(1.0 -1.0)
+```
+
 ### Tuples
 
 Tuple literals use curly braces, where the tuple elements are arbitrary
