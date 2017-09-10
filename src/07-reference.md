@@ -606,21 +606,16 @@ warning to the user.
 #### Syntax
 
 ```
-(compiler-cond (<test_0>
-                <form_0>)
-               (<test_1>
-                <form_1>)
-               ...
-               (otherwise
-                <default>))
+(compiler-cond {(<test> <form>)}*
+               (otherwise <default>))
 ```
 
 #### Parameters and Values
 
-`test_0`, `test_1`, ..., `test_n`
+`test`
 : A compile-time expression. See below.
 
-`form_0`, `form_1`, ..., `form_n`
+`form`
 : An arbitrary form.
 
 `default`
@@ -641,10 +636,10 @@ If no `test` expression evaluates to true, the expression is replaced with the
 : Evaluates to true if a featuer `name` is present in the compiler's feature
   list. False otherwise.
 
-`(and <exp_0> <exp_1> ... <exp_n>)`
+`(and <exp>+)`
 : True if all `exp` expressions are true. False otherwise.
 
-`(or <exp_0> <exp_1> ... <exp_n>)`
+`(or <exp>+)`
 : True if any `exp` expressions is true. False otherwise.
 
 `(not <exp>)`
