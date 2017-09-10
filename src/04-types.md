@@ -187,7 +187,7 @@ type.
 
 A pointer is an affine value representing the memory location of another value.
 
-### References
+### References {#type:reference}
 
 #### Syntax
 
