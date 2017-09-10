@@ -28,7 +28,40 @@ Examples:
 -0000000001,000,000
 ```
 
+The following strings are not valid integer literals:
+
+```
+1,0000
+-123,0
+```
+
+The string `-0` is equivalent to `0`.
+
 #### Floating-Point Numbers
+
+Floating point literals are string matched by the regular expression:
+
+```
+^[+|-]?0*(\d+|\d{1,3}(,\d{3})*)\.([f|d]?[0-9]+)([Ee][+-]?[0-9]+)?$
+```
+
+Examples:
+
+```
+0.0
+123.0
+123.d0
+123.f0
+-123.f0
+-123.d0
++1,000,234.0
+-0000000001,234,456.f0
+1,000,123.0e123
+100.d0e-452
+```
+
+If the decimal point is followed by the letter `f`, the type of the literal is
+`f32`. If it's followed by the letter `d`, the type of the literal is `f64`.
 
 #### Fixed-Point Numbers
 
