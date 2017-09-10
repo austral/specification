@@ -62,7 +62,7 @@ expressions are evaluated once and treated as references, mutiple calls to a
 function with the same arguments will produce different results by (potentially
 unwittingly) mutating a default argument value.
 
-### Examples
+### Examples {#fn:concrete-examples}
 
 Below is an implementation of the recursive Fibonacci function. Both the range
 and codomain are unsigned 64-bit integers.
