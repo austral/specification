@@ -188,6 +188,43 @@ type.
 
 ### Pointers
 
+#### Syntax
+
+```
+(pointer <type>)
+```
+
+#### Parameters
+
+`type`
+: The pointed-to type.
+
+#### Description
+
+A pointer is an affine value representing the memory location of another value.
+
+### References
+
+#### Syntax
+
+```
+(reference <type> <region>)
+```
+
+#### Parameters
+
+`type`
+: The referenced type.
+
+`region`
+: The name of the region.
+
+#### Description
+
+A reference acts as a pointer without the affine restriction, but with the added
+restriction that it is tagged with a region identifier that prevents memory
+safety violations.
+
 ### Arrays
 
 #### Fixed-Size Arrays {#type:fixed-size-array}
