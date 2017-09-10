@@ -291,7 +291,7 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 #### Syntax
 
 ```
-(defun <name> (<param-list>) <return>
+(defun <name> <param-list> <return>
   [<documentation>]
   <body>*)
 ```
