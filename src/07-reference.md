@@ -524,6 +524,28 @@ nickname for `meter`.
 
 ### `allocate`
 
+#### Syntax
+
+```
+(allocate <form>)
+```
+
+#### Parameters and Values
+
+`form`
+: A form.
+
+#### Description
+
+The `allocate` operator takes an arbitrary value as its sole argument, allocates
+it on the heap, and returns a [pointer](#type:pointer) to it.
+
+#### Examples
+
+```
+(allocate 3.d14) ;; returns a value of type (pointer f64)
+```
+
 ### `load`
 
 ### `borrowing`
