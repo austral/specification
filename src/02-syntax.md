@@ -119,8 +119,6 @@ digits long.
 The type of a string literal is a [fixed-size array](#type:fixed-size-array) of
 unsigned bytes (`u8`). The bytes are the the UTF-8 representation of the string.
 
-## Sigils
-
 ## Comments
 
 Two types of comments are defined: single and multi-line. Single line comments
