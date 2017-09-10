@@ -7,7 +7,7 @@ Austral supports structured documentation forms.
 In every case, a documentation form is either a string literal, or the
 more complex structured form described in the *Syntax* subsections below.
 
-### Concrete Functions
+### Concrete Functions {#doc:concrete-fn}
 
 The documentation form for the [`defun`](#op:defun) special operator allows
 documenting parameters, the return value, and adding deprecation warnings.
