@@ -335,7 +335,8 @@ The `defrecord` special operator defines a new [record type](#type:record).
 
 If the definition omits the slot list, the record is assumed to be a
 forward-declared record. No operations can be defined on it until the complete
-definition is provided.
+definition is provided. Note that omitting the slot list is not the same as
+having an empty slot list.
 
 #### Examples
 
