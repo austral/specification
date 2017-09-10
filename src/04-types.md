@@ -190,7 +190,7 @@ type.
 
 ### Arrays
 
-#### Fixed-Size Arrays
+#### Fixed-Size Arrays {#type:fixed-size-array}
 
 #### Fixed-Capacity Arrays
 
