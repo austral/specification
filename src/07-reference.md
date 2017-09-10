@@ -506,7 +506,7 @@ nickname for `meter`.
 
 ## Tuples
 
-### `tuple`
+### `tuple` {#op:tuple}
 
 #### Syntax
 
@@ -526,7 +526,7 @@ those values in the given order.
 
 #### Examples
 
-### `proj`
+### `proj` {#op:proj}
 
 #### Syntax
 
