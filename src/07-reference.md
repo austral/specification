@@ -288,6 +288,38 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 ### `defun` {#op:defun}
 
+#### Syntax
+
+```
+(defun <name> (<param-list>) <return>
+  [<documentation>]
+  <body>*)
+```
+
+#### Parameters and Values
+
+`name`
+: The function name, a symbol.
+
+`param-list`
+: The function parameter list. See [this section](#fn:concrete-param-list) for
+  its description.
+
+`return`
+: The function return type.
+
+`documentation`
+: The function's documentation expression. See [this section](#doc:concrete-fn)
+  for its description.
+
+#### Description
+
+The `defun` special operator defines a [concrete function](#fn:concrete).
+
+#### Examples
+
+See [this section](#fn:concrete-examples).
+
 ### `definterface`
 
 ### `defmethod`
