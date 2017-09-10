@@ -109,6 +109,18 @@ with the same number of elements as in the literal form.
 
 ### Strings
 
+String literals are delimited by double quote (`"`) characters.
+
+When present in a string literal, the backslash can be used to insert special
+characters: `\"` is a double quote character, `\\` is a single backslash
+character, `\n` is a line feed, `\r` is a carriage return, and `\t` is a
+horizontal tab. Arbitrary Unicode code points are inserted using the string
+`\U{n}`, where `n` is a hexadecimal positive integer between one and eight
+digits long.
+
+The type of a string literal is a [fixed-size array](#type:fixed-size-array) of
+unsigned bytes (`u8`). The bytes are the the UTF-8 representation of the string.
+
 ## Sigils
 
 ## Comments
