@@ -16,7 +16,8 @@ interpreted as described in RFC 2119.
 
 Specially in syntax definitions, the following rules are used:
 
-1. Text in angular brackets represents a variable, eg. <var>, <args>, <val>.
+1. Text in angular brackets represents a variable, eg. `<var>`, `<args>`,
+   `<val>`.
 
 2. The following quantifiers, when found after an expression, represent that the
    expression:
@@ -26,9 +27,6 @@ Specially in syntax definitions, the following rules are used:
 
     `*`
     : Appears any number of times.
-
-    `?`
-    : Is optional.
 
 3. Curly brackets are used to group expressions.
 4. Square brackets denote optional expressions.
