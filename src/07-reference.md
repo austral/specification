@@ -504,12 +504,6 @@ nickname for `meter`.
 
 ### `in-module`
 
-## Characters
-
-### `character-code`
-
-### `code-character`
-
 ## Tuples
 
 ### `tuple`
