@@ -33,4 +33,13 @@ Specially in syntax definitions, the following rules are used:
 
 ## Differences from Common Lisp
 
+- In Common Lisp, the single quote character (`'`) is a reader macro character
+  used as a shorthand for the `quote` special operator. In Austral, there is no
+  equivalent of the `quote` special operator. Additionally, having a special
+  syntactic role for the single quote character would prevent it from being used
+  in symbols names.  The use of single quote as a suffix in symbol names is
+  useful in many mathematical contexts (e.g. variables named `p`, `p'`, read as
+  "p prime"). For these reasons, the single quote character has no special
+  syntactic role in Austral and is a valid component of symbols.
+
 ## Acknowledgements
