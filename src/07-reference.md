@@ -526,7 +526,33 @@ those values in the given order.
 
 #### Examples
 
-### `!`
+### `proj`
+
+#### Syntax
+
+```
+(proj <tuple> <index>)
+```
+
+#### Parameters and Values
+
+`tuple`
+: A tuple.
+
+`index`
+: A positive non-zero integer constant.
+
+### Description
+
+The `proj` (read "projection") operator takes a tuple and a constant index less
+than or equal to the length of the tuple and returns the corresponding tuple
+element.
+
+### Examples
+
+```
+(proj {1 2 3} 1) ⇒ 1
+```
 
 ## Unions
 
