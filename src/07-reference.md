@@ -514,6 +514,24 @@ nickname for `meter`.
 
 ### `tuple`
 
+#### Syntax
+
+```
+(tuple <exp>*)
+```
+
+#### Parameters and Values
+
+`exp`
+: An expression.
+
+#### Description
+
+The `tuple` operator takes a list of values and returns a corresponding tuple of
+those values in the given order.
+
+#### Examples
+
 ### `!`
 
 ## Unions
