@@ -213,9 +213,51 @@ safety violations.
 
 #### Fixed-Size Arrays {#type:fixed-size-array}
 
+##### Type Specifier
+
+```
+(array <type> <size>)
+```
+
+##### Parameters
+
+`type`
+: The type of the array's elements.
+
+`size`
+: The array's length, a positive integer literal.
+
+##### Description
+
 #### Fixed-Capacity Arrays
 
+##### Type Specifier
+
+```
+(carray <type> <capacity>)
+```
+
+##### Parameters
+
+`type`
+: The type of the array's elements.
+
+`capacity`
+: The array's capacity, a positive integer literal.
+
+##### Description
+
 #### Resizeable Arrays
+
+##### Type Specifier
+
+```
+(array <type>)
+```
+
+##### Parameters
+
+##### Description
 
 ### Tuples
 
