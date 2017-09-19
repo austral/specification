@@ -43,8 +43,8 @@ operators.
 
 ## Type Equality
 
-Type equality is structural, except for records and unions, which use nominal
-equality.
+Type equality is structural, except for records and disjunctions, which use
+nominal equality.
 
 ## Built-in Types
 
@@ -296,4 +296,23 @@ value is identified by a symbol.
 
 Records are defined with the [`defrecord`](#op:defrecord) operator.
 
-### Unions
+### Disjunctions
+
+#### Type Specifier
+
+```
+<name>
+```
+
+#### Parameters
+
+`name`
+: The name of the disjunction.
+
+#### Description
+
+Disjunctions represent sum types: types formed by the logical disjunction of a
+set of types.
+
+Disjunctions are defined with the [`defdisjunction`](#op:defdisjunction)
+operator.
