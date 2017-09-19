@@ -398,6 +398,85 @@ The same record definition, fully documented:
    (y f64 "The Y-coordinate.")))
 ```
 
+### `defdisjunction` {#op:defdisjunction}
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+The following disjunction contains two constructors and has no type parameters
+or values, making it equivalent to an enumeration in C:
+
+```
+(defdisjunction parity ()
+  ((even)
+   (odd)))
+```
+
+Instances of this disjunction can be instantiated by calling the constructors
+with no arguments: `(even)` creates an instance of the `even` variant of
+`parity`, `(odd)` creates an instance of the `odd` variant.
+
+Another enumeration-equivalent disjunction, this time with documentation
+strings:
+
+```
+(defdisjunction color ()
+  "Represents one of three colors."
+  ((red "Red")
+   (green "Green")
+   (blue "Blue")))
+```
+
+Instances of `color` are instantiated as described above: `(red)`, `(green)` and
+`(blue)` create instances of their corresponding variants.
+
+The following disjunction contains a type parameter:
+
+```
+(defdisjunction list (T)
+  "A list is either the empty list or a cons cell."
+  ((empty
+    "The empty list")
+   (cons
+     ((head T "The list head")
+      (rest (reference (list T)) "The rest of the list"))
+     "A cons cell")))
+```
+
+Because the `empty` case has no values, its constructor is ambigious: a bare
+call like `(empty)` would have the abstract type `(list T)`. Because Austral
+doesn't use type inference, the ambigious call mus be resolved by calling it
+within the context of a [`the`](#op:the) form: `(the (list i32) (empty))` would
+create an instance of the `empty` case of `(list i32)`.
+
+The `cons` constructor, however, contains in its arguments the type parameter
+`T`, so there's enough information in a `cons` call to deduce its return type. A
+call like:
+
+```
+(cons 3.f14 (refer (the (list f32) (empty))))
+```
+
+Would create an instance of `(list f32)`.
+
+An example of a disjunction where all constructors are ambigous is the following:
+
+```
+(defdisjunction either (L R)
+  ((left L
+    "The left case.")
+   (right R
+    "The right case.")))
+```
+
+A call like `(the (either i32 f32) (left 12))` would instantiate the left case,
+while `(the (either i32 f32) (right 3.f14))` would instantiate the right case.
+
 ### `defmagnitude` {#op:defmagnitude}
 
 #### Syntax
