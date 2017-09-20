@@ -118,13 +118,47 @@ Is equivalent to:
 
 #### Syntax
 
+```
+(cond <case>* (otherwise <default>*))
+
+case := (<test> <consequent>*)
+```
+
 #### Parameters and Values
+
+`test`
+: An expression of type [`boolean`](#type:boolean).
+
+`consequent`
+: An [implicit `progn`](#g:implicit-progn).
+
+`default`
+: An [implicit `progn`](#g:implicit-progn).
 
 #### Description
 
+The `cond` special operator evaluates `test` forms one at a time, in the order
+in which they appear, until one of them evaluates to `true`. The `consequent`
+corresponding to that test is evaluated and returned as the value of the `cond`
+expression. If no `test` form evaluates to `true`, the `default` form is
+evaluated and returned as the value of the `cond` expression.
+
+All `consequent` forms of a `cond` expression must have the same type.
+
 #### Examples
 
+```
+(cond ((< a 0)
+       (less-than-zero))
+      ((> a 0)
+       (greater-than-zero))
+      (otherwise
+       (exactly-zero)))
+```
+
 #### See Also
+
+- [`if`](#op:if)
 
 ### `when` {#op:when}
 
