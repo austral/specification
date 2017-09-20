@@ -700,6 +700,8 @@ The expression `(* 2 pi)` is equivalent to `(* 2 3.14)`.
 
 - [`defmacro`](#op:defmacro)
 
+### `define-compiler-macro` {#op:define-compiler-macro}
+
 ## Modules
 
 ### `defmodule` {#op:defmodule}
