@@ -665,9 +665,49 @@ potentially different types.
 
 ## Modules
 
-### `defmodule`
+### `defmodule` {#op:defmodule}
 
-### `in-module`
+### `in-module` {#op:in-module}
+
+#### Syntax
+
+```
+(in-module <name>)
+```
+
+#### Parameters and Values
+
+`name`
+: A module name.
+
+#### Description
+
+The `in-module` special form changes the current module to the module named
+`name`.
+
+#### Examples
+
+```
+(defmodule alpha
+  (:use austral))
+(in-module alpha)
+
+(defun none () unit
+  nil)
+;; The fully-qualified name of the above function is `alpha::test`
+
+(defmodule beta
+  (:use austral))
+(in-module beta)
+
+(defun plusone ((n i64)) i64
+  (+ n 1))
+;; The fully-qualified name of the above function is `beta::plusone`
+```
+
+#### See Also
+
+- [`defmodule`](#op:defmodule)
 
 ## Tuples
 
