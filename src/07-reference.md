@@ -561,9 +561,22 @@ nickname for `meter`.
 
 #### Syntax
 
+```
+(the <type> <exp>)
+```
+
 #### Parameters and Values
 
+`type`
+: A type specifier.
+
+`exp`
+: An expression.
+
 #### Description
+
+The `the` special operator creates instances of types from compatible values of
+potentially different types.
 
 #### Examples
 
