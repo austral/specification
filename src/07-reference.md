@@ -80,6 +80,12 @@ information, it suffices to replace the test form with the form `(:likely
 
 #### Examples
 
+```
+(if true 1 0) ⇒ 1
+
+(if false 1 0) ⇒ 0
+```
+
 Using branch prediction hints:
 
 ```
@@ -93,6 +99,20 @@ Using branch prediction hints:
 - [`cond`](#op:cond)
 - [`when`](#op:when)
 - [`unless`](#op:unless)
+
+#### Notes
+
+The expression:
+
+```
+(if (test) (consequent) (alternate))
+```
+
+Is equivalent to:
+
+```
+(cond ((test) (consequent)) (otherwise (alternate)))
+```
 
 ### `cond` {#op:cond}
 
