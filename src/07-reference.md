@@ -633,7 +633,7 @@ element.
 (proj {1 2 3} 1) ⇒ 1
 ```
 
-## Unions
+## Disjunctions
 
 ### `case`
 
