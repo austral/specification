@@ -618,6 +618,10 @@ those values in the given order.
 
 #### Examples
 
+#### See Also
+
+- [`proj`](#op:proj)
+
 ### `proj` {#op:proj}
 
 #### Syntax
@@ -645,6 +649,10 @@ element.
 ```
 (proj {1 2 3} 1) ⇒ 1
 ```
+
+#### See Also
+
+- [`tuple`](#op:tuple)
 
 ## Disjunctions
 
