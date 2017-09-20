@@ -704,6 +704,53 @@ The expression `(* 2 pi)` is equivalent to `(* 2 3.14)`.
 
 ### `defmodule` {#op:defmodule}
 
+#### Syntax
+
+```
+(defmodule <name>
+  [<use>]
+  [<local-nicknames>]
+  <import>*
+  <export>*)
+
+<use> := (:use <use-name>*)
+
+<local-nicknames> := (:module-local-nicknames (<nickname> <fullname>)*)
+
+<import> := (:import-from <import-name> <symbol>*)
+
+<export> := (:export <export-name>*)
+```
+
+#### Parameters and Values
+
+`name`
+: The module name, a symbol.
+
+`use-name`
+: The name of a module to use, a symbol.
+
+`nickname`
+: A module-local nickname for another module, a symbol.
+
+`fullname`
+: The module name a nickname is associated to, a symbol.
+
+`import-name`
+: The name of a module to import symbols from.
+
+`symbol`
+: A symbol exported by the module named `import-name`.
+
+`export-name`
+: A symbol to export from this module.
+
+#### Description
+
+The `defmodule` special operator defines a new module.
+
+#### Examples
+
 ### `in-module` {#op:in-module}
 
 #### Syntax
