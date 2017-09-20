@@ -661,8 +661,6 @@ potentially different types.
 
 ### `define-symbol-macro`
 
-### `symbol-macrolet`
-
 ## Modules
 
 ### `defmodule` {#op:defmodule}
