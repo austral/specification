@@ -638,13 +638,13 @@ those values in the given order.
 `index`
 : A positive non-zero integer constant.
 
-### Description
+#### Description
 
 The `proj` (read "projection") operator takes a tuple and a constant index less
 than or equal to the length of the tuple and returns the corresponding tuple
 element.
 
-### Examples
+#### Examples
 
 ```
 (proj {1 2 3} 1) ⇒ 1
