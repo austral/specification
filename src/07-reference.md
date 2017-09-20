@@ -44,6 +44,10 @@ None.
 
 ```
 (if <test> <consequent> <alternate>) ⇒ <result>
+
+(if (:likely <test>) <consequent> <alternate>) ⇒ <result>
+
+(if (:unlikely <test>) <consequent> <alternate>) ⇒ <result>
 ```
 
 #### Parameters and Values
@@ -67,7 +71,22 @@ the test was true, it evaluates the `consequent` and returns it. Otherwise, it
 evaluates the `alternate`. Both `consequent` and `alternate` expressions must be
 of the same type.
 
+Branch prediction information can be provided to the compiler, which MAY
+(depending on the implementation, the underlying ISA, and machine description)
+generate code that takes advantage of it. To provide branch prediction
+information, it suffices to replace the test form with the form `(:likely
+<test>)` to indicate the `test` is likely to evaluate to `true`, and `(:unlikely
+<test>)` otherwise.
+
 #### Examples
+
+Using branch prediction hints:
+
+```
+(if (:likely (test-that-is-usually-true))
+    (true-branch)
+    (false-branch))
+```
 
 #### See Also
 
