@@ -723,7 +723,7 @@ value.
 #### Parameters and Values
 
 `feature`
-    The feature name, a symbol.
+: The feature name, a symbol.
 
 #### Description
 
