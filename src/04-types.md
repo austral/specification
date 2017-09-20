@@ -154,21 +154,17 @@ point number.
 #### Type Specifier
 
 ```
-(complex <real> <imaginary>)
+(complex <type>)
 ```
 
 #### Parameters
 
-`real`
-: The type specifier of the real part.
-
-`imaginary`
-: The type specifier of the imaginary part.
+`type`
+: A real number type specifier.
 
 #### Description
 
-Both `real` and `imaginary` type parameters MUST denote the same real-number
-type.
+The `type` parameter determines the type of both the real and imaginary parts.
 
 ### Pointers {#type:pointer}
 
