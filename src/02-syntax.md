@@ -114,14 +114,18 @@ with the same number of elements as in the literal form.
 String literals are delimited by double quote (`"`) characters.
 
 When present in a string literal, the backslash can be used to insert special
-characters: `\"` is a double quote character, `\\` is a single backslash
-character, `\n` is a line feed, `\r` is a carriage return, and `\t` is a
-horizontal tab. Arbitrary Unicode code points are inserted using the string
-`\U{n}`, where `n` is a hexadecimal positive integer between one and eight
-digits long.
+characters:
 
-The type of a string literal is a [fixed-size array](#type:fixed-size-array) of
-unsigned bytes (`u8`). The bytes are the the UTF-8 representation of the string.
+- `\"` inserts a double quote character.
+- `\\` inserts a single backslash character.
+- `\n` inserts a line feed.
+- `\r` inserts a carriage return.
+- `\t` inserts a horizontal tab character.
+- A single backslash, followed by an arbitrary amount of whitespace, followed by
+  another backslash character; inserts nothing, and can be used to write
+  properly-indented multi-line strings without inserting extraneous whitespace.
+- Arbitrary Unicode code points are inserted using the string `\U{n}`, where `n`
+  is a hexadecimal positive integer between one and eight digits long.
 
 ## Comments
 
