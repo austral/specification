@@ -4,6 +4,16 @@ This section describes Austral's syntax.
 
 ## Symbols
 
+Symbols in Austral can be made up of any of the following characters.
+
+- The letters `A` to `Z`, in lowercase and uppercase form.
+- The digits `0` to `9`.
+- The symbols `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `<`, `=`, `>`,
+  `?`, `@`, `\`, `~`, `^`, `|`.
+
+The name of a module can be up to 32 characters (in this alphabet, unsigned
+bytes) long. The name of a symbol, also, can be up to 32 characters long.
+
 ## Literals
 
 This section describes literal representations of Austral values.
