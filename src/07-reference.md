@@ -267,18 +267,19 @@ None.
 #### Syntax
 
 ```
-(and <lhs> <rhs>)
+(and <exp>+)
 ```
 
 #### Parameters and Values
 
-`lhs`, `rhs`
+`exp`
 : An expression of type [`boolean`](#type:boolean).
 
 #### Description
 
-The `and` function evaluates to `true` when both arguments are `true`, `false`
-otherwise.
+The `and` special operator evaluates forms one at a time, from left to right,
+returning `false` as soon as a form evaluates to `false`. If all forms evaluate
+to `true`, it returns `true`.
 
 #### Examples
 
@@ -298,18 +299,19 @@ otherwise.
 #### Syntax
 
 ```
-(or <lhs> <rhs>)
+(or <exp>+)
 ```
 
 #### Parameters and Values
 
-`lhs`, `rhs`
+`exp`
 : An expression of type [`boolean`](#type:boolean).
 
 #### Description
 
-The `or` function evaluates to `true` if either argument is `true`, `false`
-otherwise.
+The `or` special operator evaluates forms one at a time, from left to right,
+returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
+`false`, it returns `false`.
 
 #### Examples
 
