@@ -2,11 +2,7 @@
 
 Austral is a low-level, statically-typed, memory safe, compiled dialect of Lisp.
 
-## The Language
-
-### Design Principles
-
-### Anti-Features
+## Design
 
 ## Notational Conventions
 
