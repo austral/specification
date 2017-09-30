@@ -429,6 +429,8 @@ us always the zero value of that type.
 
 #### Notes
 
+A possible interface declaration:
+
 ```
 (definterface checked-arithmetic (type)
   ((&+ ((lhs type) (rhs type)) {type boolean}
@@ -604,6 +606,30 @@ A definition with more documentation strings:
 #### See Also
 
 - [`definterface`](#op:definterface)
+
+### `fn`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `call`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
 
 ## Types
 
