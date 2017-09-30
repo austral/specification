@@ -398,11 +398,11 @@ A possible definition of the inferface:
 ```
 
 
-### `overflow-arithmetic`
+### `checked-arithmetic`
 
 #### Description
 
-The `overflow-arithmetic` interface defines arithmetic operations with explicit
+The `checked-arithmetic` interface defines arithmetic operations with explicit
 overflow checking. Each operation returns a [tuple](#type:tuple) of a number and
 a [`boolean`](#type:boolean) indicating whether overflow has occurred.
 
@@ -430,7 +430,7 @@ us always the zero value of that type.
 #### Notes
 
 ```
-(definterface overflow-arithmetic (type)
+(definterface checked-arithmetic (type)
   ((&+ ((lhs type) (rhs type)) type
     "Addition with overflow checking.")
    (&- ((minuend type) (subtrahend type)) type
