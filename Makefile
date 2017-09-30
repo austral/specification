@@ -1,5 +1,6 @@
 BUILD    := build
 HTML     := $(BUILD)/spec.html
+PDF      := $(BUILD)/spec.pdf
 
 PANDOC_FLAGS := --standalone --smart --table-of-contents
 
@@ -14,7 +15,14 @@ $(BUILD):
 $(HTML): $(BUILD) $(SOURCE_LIST)
 	pandoc $(SOURCE_LIST) -f markdown -t html $(PANDOC_FLAGS) -o $(HTML)
 
-all: $(HTML)
+$(PDF): $(BUILD) $(SOURCE_LIST)
+	pandoc $(SOURCE_LIST) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $(PDF)
+
+html: $(HTML)
+
+pdf: $(PDF)
+
+all: html
 
 clean:
 	rm -rf $(BUILD)
