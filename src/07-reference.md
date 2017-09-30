@@ -395,6 +395,50 @@ A possible definition of the inferface:
      "Division")))
 ```
 
+
+### `overflow-arithmetic`
+
+#### Description
+
+The `overflow-arithmetic` interface defines arithmetic operations with explicit
+overflow checking. Each operation returns a [tuple](#type:tuple) of a number and
+a [`boolean`](#type:boolean) indicating whether overflow has occurred.
+
+When overflow has occurred, the value of the number in the [tuple](#type:tuple)
+us always the zero value of that type.
+
+#### Generic Functions
+
+`&+ ((lhs type) (rhs type)) {type boolean}`
+: The `+` generic function performs addition with overflow checking.
+
+`&- ((minuend type) (subtrahend type)) {type boolean}`
+: The `-` generic function performs subtraction with overflow
+  checking.
+
+`&* ((lhs type) (rhs type)) {type boolean}`
+: The `*` generic function performs multiplication with overflow
+  checking.
+
+`&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) {type boolean}`
+: The `/` generic function performs division with overflow checking on a non-zero denominator.
+
+#### Examples
+
+#### Notes
+
+```
+(definterface overflow-arithmetic (type)
+  ((&+ ((lhs type) (rhs type)) type
+    "Addition with overflow checking.")
+   (&- ((minuend type) (subtrahend type)) type
+    "Subtraction with overflow checking.")
+   (&* ((lhs type) (rhs type)) type
+    "Multiplication with overflow checking.")
+   (&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
+     "Division with overflow checking.")))
+```
+
 ### `saturation-arithmetic`
 
 #### Description
