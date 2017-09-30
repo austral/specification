@@ -431,13 +431,13 @@ us always the zero value of that type.
 
 ```
 (definterface checked-arithmetic (type)
-  ((&+ ((lhs type) (rhs type)) type
+  ((&+ ((lhs type) (rhs type)) {type boolean}
     "Addition with overflow checking.")
-   (&- ((minuend type) (subtrahend type)) type
+   (&- ((minuend type) (subtrahend type)) {type boolean}
     "Subtraction with overflow checking.")
-   (&* ((lhs type) (rhs type)) type
+   (&* ((lhs type) (rhs type)) {type boolean}
     "Multiplication with overflow checking.")
-   (&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
+   (&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) {type boolean}
      "Division with overflow checking.")))
 ```
 
