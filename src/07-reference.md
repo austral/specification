@@ -1,5 +1,8 @@
 # Language Reference
 
+This section documents the functionality an Austral implementation MUST provide
+from the `austral` module.
+
 ## Control Flow
 
 ### `progn` {#op:progn}
@@ -111,7 +114,7 @@ The expression:
 Is equivalent to:
 
 ```
-(cond ((test) (consequent)) (otherwise (alternate)))
+(cond ((test) (consequent)) (:otherwise (alternate)))
 ```
 
 ### `cond` {#op:cond}
@@ -119,7 +122,7 @@ Is equivalent to:
 #### Syntax
 
 ```
-(cond <case>* (otherwise <default>*))
+(cond <case>* (:otherwise <default>*))
 
 case := (<test> <consequent>*)
 ```
@@ -149,11 +152,11 @@ All `consequent` forms of a `cond` expression must have the same type.
 
 ```
 (cond ((< a 0)
-       (less-than-zero))
+       "Less than zero")
       ((> a 0)
-       (greater-than-zero))
-      (otherwise
-       (exactly-zero)))
+       "Greater than zero")
+      (:otherwise
+       "Exactly zero"))
 ```
 
 #### See Also
@@ -351,6 +354,47 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 ## Arithmetic Operations
 
+### `modular-arithmetic`
+
+#### Description
+
+The `modular-arithmetic` interface defines the basic arithmetic operations, and
+provides implementations for all built-in numeric types.
+
+Arithmetic operations overflow using two's complement representation.
+
+#### Generic Functions
+
+`+ ((lhs T) (rhs T)) T`
+: The `+` generic function performs modular addition.
+
+`- ((minuend T) (subtrahend T)) T`
+: The `-` generic function performs modular subtraction.
+
+`* ((lhs T) (rhs T)) T`
+: The `*` generic function performs modular multiplication.
+
+`/ ((numerator T) (denominator (refined T (bipartite non-zero)))) T`
+: The `/` generic function performs modular division on a non-zero denominator.
+
+#### Examples
+
+#### Notes
+
+A possible definition of the inferface:
+
+```
+(definterface modular-arithmetic (T)
+  ((+ ((lhs T) (rhs T)) T
+    "Addition")
+   (- ((minuend T) (subtrahend T)) T
+    "Subtraction")
+   (* ((lhs T) (rhs T)) T
+    "Multiplication")
+   (/ ((numerator T) (denominator (refined T (bipartite non-zero)))) T
+     "Division")))
+```
+
 ## Bitwise Operations
 
 ## Assignment
@@ -389,17 +433,134 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 
 The `defun` special operator defines a [concrete function](#fn:concrete).
 
+If the `body` is omitted, the form is treated as a forward declaration. A future
+`defun` form, with the same arguments and a function body, can be used to
+provide the function definition.
+
 #### Examples
 
 See [this section](#fn:concrete-examples).
 
-### `definterface`
+### `definterface` {#op:definterface}
 
-### `defmethod`
+#### Syntax
+
+```
+(definterface <name> (<type>*)
+  [<documentation>]
+  (<generic-function>*))
+
+<generic-function> := (<fn> <param-list> <return>
+                        [<fn-documentation>]
+                        <body>*)
+```
+
+#### Parameters and Values
+
+`name`
+: The interface name.
+
+`type`
+: A type parameter name.
+
+`documentation`
+: An optional interface documentation form.
+
+`fn`
+: The name of a generic function.
+
+`param-list`
+: The function parameter list.
+
+`return`
+: The function's return type.
+
+`fn-documentation`
+: An optional generic function documentation form.
+
+`body`
+: If present, the default implementation of the generic function.
+
+#### Description
+
+The `definterface` special operator defines an [interface](#type:interface).
+
+#### Examples
+
+A bare definition of an interface for objects that can be printed to a stream:
+
+```
+(definterface printable (T)
+  ((print ((instance T) (stream stream)))))
+```
+
+A definition with more documentation strings:
+
+```
+(definterface printable (T)
+  "Printable objects."
+
+  ((print ((instance T) (stream stream))
+    "Print a representation of instance to stream.")))
+```
+
+#### See Also
+
+- [`defimplementation`](#op:defimplementation)
+
+### `defimplementation` {#op:defimplementation}
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+- [`definterface`](#op:definterface)
 
 ## Types
 
 ### `deftype` {#op:deftype}
+
+#### Syntax
+
+```
+(deftype <name> (<param>*)
+  [<docstring>]
+  <definition>)
+```
+
+#### Parameters and Values
+
+`name`
+: The type name.
+
+`param`
+: A type parameter.
+
+`docstring`
+: An optional type docstring.
+
+`definition`
+: A type specifier.
+
+#### Description
+
+#### Examples
+
+```
+(deftype usize ()
+  u64)
+```
+
+#### See Also
+
+- [`defrecord`](#op:defrecord)
+- [`defdisjunction`](#op:defdisjunction)
 
 ### `defrecord` {#op:defrecord}
 
@@ -471,13 +632,30 @@ The same record definition, fully documented:
    (y f64 "The Y-coordinate.")))
 ```
 
+#### See Also
+
+- [`deftype`](#op:deftype)
+- [`defdisjunction`](#op:defdisjunction)
+
 ### `defdisjunction` {#op:defdisjunction}
 
 #### Syntax
 
+```
+(defdisjunction <name> (<param>*)
+  [<docstring>]
+  [(<case>*)])
+
+case := (<case-name> (<case-slot>*) [<case-docstring>])
+
+case-slot := (<slot-name> <slot-type>)
+```
+
 #### Parameters and Values
 
 #### Description
+
+The `defdisjunction` special form defines a [disjunction](#type:disjunction).
 
 #### Examples
 
@@ -486,8 +664,8 @@ or values, making it equivalent to an enumeration in C:
 
 ```
 (defdisjunction parity ()
-  ((even)
-   (odd)))
+  ((even ())
+   (odd ())))
 ```
 
 Instances of this disjunction can be instantiated by calling the constructors
@@ -500,9 +678,9 @@ strings:
 ```
 (defdisjunction color ()
   "Represents one of three colors."
-  ((red "Red")
-   (green "Green")
-   (blue "Blue")))
+  ((red () "Red")
+   (green () "Green")
+   (blue () "Blue")))
 ```
 
 Instances of `color` are instantiated as described above: `(red)`, `(green)` and
@@ -513,8 +691,8 @@ The following disjunction contains a type parameter:
 ```
 (defdisjunction list (T)
   "A list is either the empty list or a cons cell."
-  ((empty
-    "The empty list")
+  ((empty ()
+     "The empty list")
    (cons
      ((head T "The list head")
       (rest (reference (list T)) "The rest of the list"))
@@ -549,6 +727,11 @@ An example of a disjunction where all constructors are ambigous is the following
 
 A call like `(the (either i32 f32) (left 12))` would instantiate the left case,
 while `(the (either i32 f32) (right 3.f14))` would instantiate the right case.
+
+#### See Also
+
+- [`deftype`](#op:deftype)
+- [`defrecord`](#op:defrecord)
 
 ### `defmagnitude` {#op:defmagnitude}
 
@@ -653,11 +836,29 @@ potentially different types.
 
 #### Examples
 
+```
+(the u8 23) ⇒ 23 : u8
+```
+
 #### See Also
+
+None.
 
 ## Macros
 
 ### `defmacro` {#op:defmacro}
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+- [`define-symbol-macro`](#op:define-symbol-macro)
 
 ### `define-symbol-macro` {#op:define-symbol-macro}
 
@@ -944,7 +1145,7 @@ warning to the user.
 
 ```
 (compiler-cond {(<test> <form>)}*
-               (otherwise <default>))
+               (:otherwise <default>))
 ```
 
 #### Parameters and Values
