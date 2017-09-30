@@ -1,12 +1,22 @@
 # Type System
 
-## Overview
+A type is a (potentially infinite) set of objects. An object belongs to a single
+type.
+
+Austral has no first-class type values: types are denoted through type
+specifiers, which are syntactic constructs that represent types.
+
+New types can be defined
+with [`deftype`](#op:deftype), [`defrecord`](#op:defrecord)
+and [`defdisjunction`](#op:defdisjunction).
 
 ## Type Specifiers
 
-## Type Constraints
+A type specifier is a form that denotes a type.
 
-## Interfaces
+## Interfaces {#type:interface}
+
+## Type Constraints
 
 ## Affine Types
 
@@ -225,6 +235,9 @@ safety violations.
 
 ##### Description
 
+A fixed-size array is an ordered collection of values whose size is known at
+compile time.
+
 #### Fixed-Capacity Arrays
 
 ##### Type Specifier
@@ -248,12 +261,33 @@ safety violations.
 ##### Type Specifier
 
 ```
-(array <type>)
+(varray <type>)
 ```
 
 ##### Parameters
 
+`type`
+: The type of the array's elements.
+
 ##### Description
+
+A resizeable array is an affine, heap-allocated ordered collection of values.
+
+### Strings
+
+#### Type Specifier
+
+```
+string
+```
+
+#### Parameters
+
+None.
+
+#### Description
+
+The `string` type is the type of string literals.
 
 ### Tuples
 
@@ -292,7 +326,7 @@ value is identified by a symbol.
 
 Records are defined with the [`defrecord`](#op:defrecord) operator.
 
-### Disjunctions
+### Disjunctions {#type:disjunction}
 
 #### Type Specifier
 
