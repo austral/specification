@@ -365,16 +365,16 @@ Arithmetic operations overflow using two's complement representation.
 
 #### Generic Functions
 
-`+ ((lhs T) (rhs T)) T`
+`+ ((lhs type) (rhs type)) type`
 : The `+` generic function performs modular addition.
 
-`- ((minuend T) (subtrahend T)) T`
+`- ((minuend type) (subtrahend type)) type`
 : The `-` generic function performs modular subtraction.
 
-`* ((lhs T) (rhs T)) T`
+`* ((lhs type) (rhs type)) type`
 : The `*` generic function performs modular multiplication.
 
-`/ ((numerator T) (denominator (refined T (bipartite non-zero)))) T`
+`/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type`
 : The `/` generic function performs modular division on a non-zero denominator.
 
 #### Examples
@@ -384,15 +384,52 @@ Arithmetic operations overflow using two's complement representation.
 A possible definition of the inferface:
 
 ```
-(definterface modular-arithmetic (T)
-  ((+ ((lhs T) (rhs T)) T
+(definterface modular-arithmetic (type)
+  ((+ ((lhs type) (rhs type)) type
     "Addition")
-   (- ((minuend T) (subtrahend T)) T
+   (- ((minuend type) (subtrahend type)) type
     "Subtraction")
-   (* ((lhs T) (rhs T)) T
+   (* ((lhs type) (rhs type)) type
     "Multiplication")
-   (/ ((numerator T) (denominator (refined T (bipartite non-zero)))) T
+   (/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
      "Division")))
+```
+
+### `saturation-arithmetic`
+
+#### Description
+
+The `saturation-arithmetic` interface defines saturation arithmetic
+operations. Overflow "clamps" on the maximum or minimum values.
+
+#### Generic Functions
+
+`^+ ((lhs type) (rhs type)) type`
+: The `+` generic function performs saturating addition.
+
+`^- ((minuend type) (subtrahend type)) type`
+: The `-` generic function performs saturating subtraction.
+
+`^* ((lhs type) (rhs type)) type`
+: The `*` generic function performs saturating multiplication.
+
+`^/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type`
+: The `/` generic function performs saturating division on a non-zero denominator.
+
+#### Examples
+
+#### Notes
+
+```
+(definterface saturation-arithmetic (type)
+  ((^+ ((lhs type) (rhs type)) type
+    "Saturating addition")
+   (^- ((minuend type) (subtrahend type)) type
+    "Saturating subtraction")
+   (^* ((lhs type) (rhs type)) type
+    "Saturating multiplication")
+   (^/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
+     "Saturating division")))
 ```
 
 ## Bitwise Operations
