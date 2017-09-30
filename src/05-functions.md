@@ -11,7 +11,7 @@ return type MUST be specified and MUST be concrete types.
 The parameter list of a concrete function is of the form:
 
 ```
-(<named-parameter>* [&key <keyword-parameter>*))
+(<named-parameter>* [:key <keyword-parameter>*))
 
 named-parameter := (<name> <type>)
 
