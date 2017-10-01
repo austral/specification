@@ -45,12 +45,6 @@ Additionally, the following code is invalid, because `x` has been assigned to `y
   (do-something x))
 ```
 
-## Units of Measure
-
-Units of measure and the magnitudes they measure are defined with
-the [`defunit`](#op:defunit) and [`defmagnitude`](#op:defmagnitude) special
-operators.
-
 ## Type Equality
 
 Type equality is structural, except for records and disjunctions, which use
@@ -362,6 +356,20 @@ operator.
 
 #### Type Specifier
 
+```
+(unit <type> <unit>)
+```
+
 #### Parameters
 
+`type`
+: A type specifier.
+
+`unit`
+: A unit specifier.
+
 #### Description
+
+Units of measure and the magnitudes they measure are defined with
+the [`defunit`](#op:defunit) and [`defmagnitude`](#op:defmagnitude) special
+operators.
