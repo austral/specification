@@ -116,38 +116,33 @@ represents an integer large enough to hold the size of the largest possible
 array in the machine's memory. The type denoted by `isize` is its signed
 variant.
 
-### Real Numbers
+### Floating Point Numbers
 
-Austral supports two approximations of real numbers: IEEE 754 floating point and
-fixed point numbers.
-
-#### IEEE 754 Floating Point Numbers
-
-###### Type Specifier
+#### Type Specifier
 
 ```
 {f32|f64}
 ```
 
-###### Parameters
+#### Parameters
 
 None.
 
-###### Description
+#### Description
 
 The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-#### Fixed Point Numbers
+### Fixed Point Numbers
 
-###### Type Specifier
+#### Type Specifier
 
 ```
 (Q <integer> <fractional>)
 ```
 
-###### Parameters
+#### Parameters
 
 `integer`
 :  The number of integer bits.
@@ -155,7 +150,7 @@ point number.
 `fractional`
 : The number of fractional bits.
 
-###### Description
+#### Description
 
 [TBD]
 
@@ -346,3 +341,11 @@ set of types.
 
 Disjunctions are defined with the [`defdisjunction`](#op:defdisjunction)
 operator.
+
+### Function Pointers
+
+#### Type Specifier
+
+#### Parameters
+
+#### Description
