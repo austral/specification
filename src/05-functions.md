@@ -31,9 +31,9 @@ Where:
   value.
 
 `supplied`
-: The name of a [`boolean`](#type:boolean) variable whose value is `true` when
-  its corresponding parameter was supplied an argument at the call site, and
-  `false` when the default value was used instead.
+: The name of a &boolean; variable whose value is `true` when its corresponding
+  parameter was supplied an argument at the call site, and `false` when the
+  default value was used instead.
 
 Note that, when a keyword parameter defines a default value, and the
 corresponding function is called without supplying an argument to that
