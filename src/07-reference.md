@@ -24,11 +24,11 @@ from the `austral` module.
 
 #### Description
 
-The progn special operator evaluates every form in the order in which they
+The `progn` &specialform; evaluates every &form; in the order in which they
 appear, discarding every value but the last. The last value is returned.
 
-If progn appears as a toplevel form (for example, as the result of
-macroexpansion), all of its forms are considered toplevel forms.
+If `progn` appears as a toplevel form (for example, as the result of
+macroexpansion), all of its &forms; are considered toplevel forms.
 
 #### Examples
 
@@ -56,7 +56,7 @@ None.
 #### Parameters and Values
 
 `test`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 `consequent`
 : An expression that will be evaluated if condition evaluates to `true`.
@@ -69,15 +69,15 @@ None.
 
 #### Description
 
-The `if` special operator evaluates the `test` expression unconditionally. If
-the test was true, it evaluates the `consequent` and returns it. Otherwise, it
+The `if` &specialform; evaluates the `test` expression unconditionally. If the
+test was `true`, it evaluates the `consequent` and returns it. Otherwise, it
 evaluates the `alternate`. Both `consequent` and `alternate` expressions must be
 of the same type.
 
 Branch prediction information can be provided to the compiler, which MAY
 (depending on the implementation, the underlying ISA, and machine description)
 generate code that takes advantage of it. To provide branch prediction
-information, it suffices to replace the test form with the form `(:likely
+information, it suffices to replace the `test` &form; with the &form; `(:likely
 <test>)` to indicate the `test` is likely to evaluate to `true`, and `(:unlikely
 <test>)` otherwise.
 
@@ -130,18 +130,18 @@ case := (<test> <consequent>*)
 #### Parameters and Values
 
 `test`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 `consequent`
-: An [implicit `progn`](#g:implicit-progn).
+: An &iprogn;.
 
 `default`
-: An [implicit `progn`](#g:implicit-progn).
+: An &iprogn;.
 
 #### Description
 
-The `cond` special operator evaluates `test` forms one at a time, in the order
-in which they appear, until one of them evaluates to `true`. The `consequent`
+The `cond` &specialop; evaluates `test` forms one at a time, in the order in
+which they appear, until one of them evaluates to `true`. The `consequent`
 corresponding to that test is evaluated and returned as the value of the `cond`
 expression. If no `test` form evaluates to `true`, the `default` form is
 evaluated and returned as the value of the `cond` expression.
@@ -175,10 +175,10 @@ All `consequent` forms of a `cond` expression must have the same type.
 #### Parameters and Values
 
 `test`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 `body`
-: Forms evaluated as an [implicit `progn`](#g:implicit-progn).
+: Forms evaluated as an &iprogn;.
 
 #### Description
 
@@ -204,10 +204,10 @@ The return value is always `nil`.
 #### Parameters and Values
 
 `test`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 `body`
-: Forms evaluated as an [implicit `progn`](#g:implicit-progn).
+: Forms evaluated as an &iprogn;.
 
 #### Description
 
@@ -273,11 +273,11 @@ None.
 #### Parameters and Values
 
 `exp`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 #### Description
 
-The `and` special operator evaluates forms one at a time, from left to right,
+The `and` &specialop; evaluates forms one at a time, from left to right,
 returning `false` as soon as a form evaluates to `false`. If all forms evaluate
 to `true`, it returns `true`.
 
@@ -305,11 +305,11 @@ to `true`, it returns `true`.
 #### Parameters and Values
 
 `exp`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 #### Description
 
-The `or` special operator evaluates forms one at a time, from left to right,
+The `or` &specialop; evaluates forms one at a time, from left to right,
 returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
 `false`, it returns `false`.
 
@@ -337,7 +337,7 @@ returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
 #### Parameters and Values
 
 `form`
-: An expression of type [`boolean`](#type:boolean).
+: An expression of type &boolean;.
 
 #### Description
 
@@ -354,137 +354,450 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 - [`and`](#op:and)
 - [`or`](#op:or)
 
-## Arithmetic Operations
+## Modular Arithmetic
 
-### `modular-arithmetic`
+This section describes operations on integer and fixed-point types that have
+modular behaviour on overflow and underflow.
+
+Signed integers MUST use two's complement representation to ensure consistent
+behaviour.
+
+### `+`
+
+#### Syntax
+
+```
+(+ <lhs> <rhs>)
+```
+
+#### Parameters and Values
+
+`lhs`
+: The left-hand side of the operation.
+
+`rhs`
+: The right-hand side of the operation.
 
 #### Description
 
-The `modular-arithmetic` interface defines the basic arithmetic operations, and
-provides implementations for all built-in numeric types.
+The `+` operator performs modular addition on integer and fixed-point types.
 
-Arithmetic operations overflow using two's complement representation.
-
-#### Generic Functions
-
-`+ ((lhs type) (rhs type)) type`
-: The `+` generic function performs modular addition.
-
-`- ((minuend type) (subtrahend type)) type`
-: The `-` generic function performs modular subtraction.
-
-`* ((lhs type) (rhs type)) type`
-: The `*` generic function performs modular multiplication.
-
-`/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type`
-: The `/` generic function performs modular division on a non-zero denominator.
+The `lhs` and `rhs` expressions must have the same type.
 
 #### Examples
 
-#### Notes
+#### See Also
 
-A possible definition of the inferface:
+### `-`
+
+#### Syntax
 
 ```
-(definterface modular-arithmetic (type)
-  ((+ ((lhs type) (rhs type)) type
-    "Addition")
-   (- ((minuend type) (subtrahend type)) type
-    "Subtraction")
-   (* ((lhs type) (rhs type)) type
-    "Multiplication")
-   (/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
-     "Division")))
+(- <minuend> <subtrahend>)
 ```
 
+#### Parameters and Values
 
-### `checked-arithmetic`
+`minuend`
+: The expression being subtracted from.
+
+`subtrahend`
+: The expression being subtracted.
 
 #### Description
 
+The `-` operator performs modular subtraction on integer and fixed-point types.
+
+The `minuend` and `subtrahend` expressions must have the same type.
+
+#### Examples
+
+#### See Also
+
+### `*`
+
+#### Syntax
+
+```
+(* <lhs> <rhs>)
+```
+
+#### Parameters and Values
+
+`lhs`
+: The left-hand side of the operation.
+
+`rhs`
+: The right-hand side of the operation.
+
+#### Description
+
+The `*` operator performs modular multiplication on integer and fixed-point types.
+
+The `lhs` and `rhs` expressions must have the same type.
+
+#### Examples
+
+#### See Also
+
+### `/`
+
+#### Syntax
+
+```
+(/ <numerator> <denominator>)
+```
+
+#### Parameters and Values
+
+`numerator`
+: The numerator.
+
+`denominator`
+: The denominator.
+
+#### Description
+
+The `/` operator performs division on a non-zero denominator.
+
+If the type of `numerator` is `t`, the type of `denominator` is `(refined t
+(bipartite non-zero))`. Refinements are used to statically ensure the
+denominator is non-zero.
+
+#### Examples
+
+#### See Also
+
+## Checked Arithmetic
+
+This section describes operations on integer and fixed-size types that
+explicitly check for overflow.
+
 The `checked-arithmetic` interface defines arithmetic operations with explicit
 overflow checking. Each operation returns a [tuple](#type:tuple) of a number and
-a [`boolean`](#type:boolean) indicating whether overflow has occurred.
+a &boolean; indicating whether overflow has occurred.
 
 When overflow has occurred, the value of the number in the [tuple](#type:tuple)
 us always the zero value of that type.
 
-#### Generic Functions
+### `&+`
 
-`&+ ((lhs type) (rhs type)) {type boolean}`
-: The `+` generic function performs addition with overflow checking.
+#### Syntax
 
-`&- ((minuend type) (subtrahend type)) {type boolean}`
-: The `-` generic function performs subtraction with overflow
-  checking.
-
-`&* ((lhs type) (rhs type)) {type boolean}`
-: The `*` generic function performs multiplication with overflow
-  checking.
-
-`&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) {type boolean}`
-: The `/` generic function performs division with overflow checking on a non-zero denominator.
-
-#### Examples
-
-#### Notes
-
-A possible interface declaration:
-
-```
-(definterface checked-arithmetic (type)
-  ((&+ ((lhs type) (rhs type)) {type boolean}
-    "Addition with overflow checking.")
-   (&- ((minuend type) (subtrahend type)) {type boolean}
-    "Subtraction with overflow checking.")
-   (&* ((lhs type) (rhs type)) {type boolean}
-    "Multiplication with overflow checking.")
-   (&/ ((numerator type) (denominator (refined type (bipartite non-zero)))) {type boolean}
-     "Division with overflow checking.")))
-```
-
-### `saturation-arithmetic`
+#### Parameters and Values
 
 #### Description
 
-The `saturation-arithmetic` interface defines saturation arithmetic
-operations. Overflow "clamps" on the maximum or minimum values.
+#### Examples
 
-#### Generic Functions
+#### See Also
 
-`^+ ((lhs type) (rhs type)) type`
-: The `+` generic function performs saturating addition.
+### `&-`
 
-`^- ((minuend type) (subtrahend type)) type`
-: The `-` generic function performs saturating subtraction.
+#### Syntax
 
-`^* ((lhs type) (rhs type)) type`
-: The `*` generic function performs saturating multiplication.
+#### Parameters and Values
 
-`^/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type`
-: The `/` generic function performs saturating division on a non-zero denominator.
+#### Description
 
 #### Examples
 
-#### Notes
+#### See Also
 
-```
-(definterface saturation-arithmetic (type)
-  ((^+ ((lhs type) (rhs type)) type
-    "Saturating addition")
-   (^- ((minuend type) (subtrahend type)) type
-    "Saturating subtraction")
-   (^* ((lhs type) (rhs type)) type
-    "Saturating multiplication")
-   (^/ ((numerator type) (denominator (refined type (bipartite non-zero)))) type
-     "Saturating division")))
-```
+### `&*`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `&/`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+## Saturation Arithmetic
+
+This section describes saturation arithmetic operations. Overflow and underflow
+"clamp" on the maximum and minimum values, respectively.
+
+### `^+`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `^-`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `^*`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `^/`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+## Floating-Point Arithmetic
+
+### `.+`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `.-`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `.*`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
+
+### `./`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Description
+
+#### Examples
+
+#### See Also
 
 ## Bitwise Operations
 
-## Assignment
+### `log-zero`
 
-### `set`
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-and`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-ior`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-xor`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-not`
+
+#### Syntax
+
+```
+(log-not <value>) ⇒ <result>
+```
+
+#### Parameters and Values
+
+`value`
+: An unsigned integer expression.
+
+`result`
+: The logical complement of `value`.
+
+#### Description
+
+The `log-not` function returns the logical complement of a bitfield.
+
+#### Examples
+
+### `log-shl`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-shr`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-probe`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-set-bit`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `log-rotate`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `population-count`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `leading-zeros`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
+
+### `trailing-zeros`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Type Signature
+
+#### Description
+
+#### Examples
 
 ## Functions
 
@@ -516,7 +829,7 @@ operations. Overflow "clamps" on the maximum or minimum values.
 
 #### Description
 
-The `defun` special operator defines a [concrete function](#fn:concrete).
+The `defun` &specialop; defines a [concrete function](#fn:concrete).
 
 If the `body` is omitted, the form is treated as a forward declaration. A future
 `defun` form, with the same arguments and a function body, can be used to
@@ -568,7 +881,7 @@ See [this section](#fn:concrete-examples).
 
 #### Description
 
-The `definterface` special operator defines an [interface](#type:interface).
+The `definterface` &specialop; defines an [interface](#type:interface).
 
 #### Examples
 
@@ -607,7 +920,7 @@ A definition with more documentation strings:
 
 - [`definterface`](#op:definterface)
 
-### `fn`
+### `fn` ### {#op:fn}
 
 #### Syntax
 
@@ -615,21 +928,52 @@ A definition with more documentation strings:
 
 #### Description
 
+The `fn` special operator returns a pointer to a function (either a concrete
+function or a monomorphic instance of a generic function) given the function
+name and (in the case of generic functions) its parameter and return types.
+
 #### Examples
 
 #### See Also
 
-### `call`
+- [`call`](#op:call)
+
+### `call` ### {#op:call}
 
 #### Syntax
 
+```
+(call <function> <args>*) ⇒ <result>
+```
+
 #### Parameters and Values
+
+`function`
+: A function pointer.
+
+`args`
+: An arbitrary number of arguments, potentially including keyword arguments.
+
+`result`
+: The result of applying the function to its arguments.
 
 #### Description
 
+The `call` special operator invokes the function pointed to by a function
+pointer with a list of arguments.
+
 #### Examples
 
+Assuming a definition of a concrete function `fact` with that takes an integer
+and returns its factorial:
+
+```
+(call (fn fact) 5) ⇒ 120
+```
+
 #### See Also
+
+- [`fn`](#op:fn)
 
 ## Types
 
@@ -706,7 +1050,7 @@ slot := (<slot> <type> <slot-docstring>)
 
 #### Description
 
-The `defrecord` special operator defines a new [record type](#type:record).
+The `defrecord` &specialop; defines a new [record type](#type:record).
 
 If the definition omits the slot list, the record is assumed to be a
 forward-declared record. No operations can be defined on it until the complete
@@ -865,9 +1209,9 @@ while `(the (either i32 f32) (right 3.f14))` would instantiate the right case.
 
 #### Description
 
-The `defmagnitude` special operator defines a magntiude. A magnitude represents
-a physical property that can be quantified, e.g. length or mass. Magnitudes can
-be represented by different units.
+The `defmagnitude` &specialop; defines a magntiude. A magnitude represents a
+physical property that can be quantified, e.g. length or mass. Magnitudes can be
+represented by different units.
 
 #### Examples
 
@@ -897,7 +1241,7 @@ be represented by different units.
 
 #### Description
 
-The `defunit` special operator defines a new unit of a specific magnitude.
+The `defunit` &specialop; defines a new unit of a specific magnitude.
 
 Units can have multiple nicknames, for instance, `m` can be defined as a
 nickname for `meter`.
@@ -981,18 +1325,18 @@ None.
 #### Parameters and Values
 
 `name`
-: The macro name, a symbol.
+: The macro name, a non-keyword &symbol;.
 
 `form`
-: An arbitrary form.
+: An arbitrary &form;.
 
 `documentation`
 : An optional documentation string.
 
 #### Description
 
-The `define-symbol-macro` special operator associates a symbol `name` with a
-form `form`. After macroexpansion, all instances of `symbol` are replaced with
+The `define-symbol-macro` &specialform; associates a &symbol; `name` with a
+&form; `form`. After macroexpansion, all instances of `symbol` are replaced with
 `form`.
 
 #### Examples
@@ -1009,8 +1353,6 @@ The expression `(* 2 pi)` is equivalent to `(* 2 3.14)`.
 #### See Also
 
 - [`defmacro`](#op:defmacro)
-
-### `define-compiler-macro` {#op:define-compiler-macro}
 
 ## Modules
 
@@ -1059,7 +1401,7 @@ The expression `(* 2 pi)` is equivalent to `(* 2 3.14)`.
 
 #### Description
 
-The `defmodule` special operator defines a new module.
+The `defmodule` &specialop; defines a new module.
 
 #### Examples
 
@@ -1078,7 +1420,7 @@ The `defmodule` special operator defines a new module.
 
 #### Description
 
-The `in-module` special form changes the current module to the module named
+The `in-module` &specialop; changes the current module to the module named
 `name`.
 
 #### Examples
@@ -1112,7 +1454,7 @@ The `in-module` special form changes the current module to the module named
 #### Syntax
 
 ```
-(tuple <exp>*)
+(tuple <exp>*) ⇒ <result>
 ```
 
 #### Parameters and Values
@@ -1120,12 +1462,34 @@ The `in-module` special form changes the current module to the module named
 `exp`
 : An expression.
 
+`result`
+: A tuple.
+
 #### Description
 
 The `tuple` operator takes a list of values and returns a corresponding tuple of
 those values in the given order.
 
 #### Examples
+
+The following code creates a three-element homogeneous tuple:
+
+```
+{1 2 3}
+```
+
+The following code creates a two-element tuple of a boolean and a floating point
+number:
+
+```
+{true 0.0}
+```
+
+The following code creates the empty tuple:
+
+```
+{}
+```
 
 #### See Also
 
@@ -1166,6 +1530,87 @@ element.
 ## Disjunctions
 
 ### `case`
+
+#### Syntax
+
+```
+(case <disjunction>
+  <case>*)
+
+<case> = ((<name> <slot>*) <body>+)
+```
+
+#### Parameters and Values
+
+`disjunction`
+: An expression of a [disjunction](#type:disjunction) type.
+
+`name`
+: The name of a case of that disjunction.
+
+`slot`
+: The name of a slot in the corresponding case of that disjunction to bind in
+  the scope of `body`.
+
+`body`
+: An &iprogn;.
+
+#### Description
+
+The `case` &specialform; allows accessing the values of a disjunction in each of
+its cases.
+
+An invocation of `case` must exhaustively list all cases of the disjunction.
+
+The bodies of all cases of the `case` &specialform; must have the same type.
+
+#### Examples
+
+Given the following definition:
+
+```
+(defdisjunction parity ()
+  ((even)
+   (odd)))
+```
+
+And a function `integer-parity` that takes an integer and returns an instance of
+the `parity` disjunction, we can use `case` as follows:
+
+```
+(case (integer-parity x)
+  ((even)
+   ;; Code to run if x is even
+   ...)
+  ((odd)
+   ;; Code to run if x is odd
+   ...))
+```
+
+The previous example demonstrates the basic usage of `case`, but the `parity`
+disjunction doesn't carry any values. With the following definition:
+
+```
+(defdisjunction number ()
+  ((int ((n i64)))
+   (float ((n f64)))
+   (fixed ((n (Q 16 16))))))
+```
+
+We can use `case` as follows:
+
+```
+(case a-number
+  ((int n)
+   ;; `n` is an immutable variable of type `i64`
+   ...)
+  ((float n)
+   ;; `n` is also immutable, but of type `f64`
+   ...)
+  ((fixed n)
+   ;; Finally, this version of `n` is of type (Q 16 16)
+   ...))
+```
 
 ## Memory
 
@@ -1219,6 +1664,10 @@ value.
 
 ### `borrowing`
 
+## Effects
+
+### `defeffect` {#op:defeffect}
+
 ## Features
 
 ### `provide` {#op:provide}
@@ -1236,8 +1685,8 @@ value.
 
 #### Description
 
-The `provide` special operator adds the feature `feature` to the compiler's
-feature set.
+The `provide` &specialop; adds the feature `feature` to the compiler's feature
+set.
 
 Repeated invocations of `provide` with the same feature name MUST produce a
 warning to the user.
@@ -1270,9 +1719,9 @@ warning to the user.
 
 #### Description
 
-The `compiler-cond` special operator evaluates the `test` expressions in
-sequential order. If one such expression evaluates to true, the entire form is
-replaced with the corresponding `form`.
+The `compiler-cond` &specialop; evaluates the `test` expressions in sequential
+order. If one such expression evaluates to true, the entire form is replaced
+with the corresponding `form`.
 
 If no `test` expression evaluates to true, the expression is replaced with the
 `default` form.
