@@ -4,7 +4,7 @@ A type is a (potentially infinite) set of objects. An object belongs to a single
 type.
 
 Austral has no first-class type values: types are denoted through type
-specifiers, which are syntactic constructs that represent types.
+specifiers, which are &forms; that represent types.
 
 New types can be defined
 with [`deftype`](#op:deftype), [`defrecord`](#op:defrecord)
@@ -12,7 +12,7 @@ and [`defdisjunction`](#op:defdisjunction).
 
 ## Type Specifiers
 
-A type specifier is a form that denotes a type.
+A type specifier is a &form; that denotes a type.
 
 ## Interfaces {#type:interface}
 
@@ -84,7 +84,7 @@ None.
 #### Description
 
 The type of Boolean values, denoted `boolean`, has two values: the constants
-`true` and `false.
+`true` and `false`.
 
 ### Integers
 
