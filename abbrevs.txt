@@ -1,0 +1,7 @@
+boolean         [`boolean`](#type:boolean)
+form            [form](#g:form)
+forms           [forms](#g:form)
+iprogn          [implicit `progn`](#g:implicit-progn)
+specialform     [special form](#g:special-form)
+specialop       [special operator](#g:special-operator)
+symbol          [symbol](#g:symbol)

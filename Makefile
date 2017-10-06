@@ -1,8 +1,12 @@
 BUILD    := build
+TMP0     := $(BUILD)/source0.md
+TMP      := $(BUILD)/source.md
 HTML     := $(BUILD)/spec.html
 PDF      := $(BUILD)/spec.pdf
 
-PANDOC_FLAGS := --standalone --smart --table-of-contents
+FILTER   := $(shell awk -f script.awk abbrevs.txt)
+
+PANDOC_FLAGS := --standalone --smart --table-of-contents --variable urlcolor=cyan
 
 SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
 
@@ -12,11 +16,17 @@ SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(HTML): $(BUILD) $(SOURCE_LIST)
-	pandoc $(SOURCE_LIST) -f markdown -t html $(PANDOC_FLAGS) -o $(HTML)
+$(TMP0): $(SOURCE_LIST)
+	sed -s '$$G' $(SOURCE_LIST) > $(TMP0)
 
-$(PDF): $(BUILD) $(SOURCE_LIST)
-	pandoc $(SOURCE_LIST) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $(PDF)
+$(TMP): $(TMP0)
+	cat $(TMP0) $(FILTER) > $(TMP)
+
+$(HTML): $(BUILD) $(TMP)
+	pandoc $(TMP) -f markdown -t html $(PANDOC_FLAGS) -o $(HTML)
+
+$(PDF): $(BUILD) $(TMP)
+	pandoc $(TMP) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $(PDF)
 
 html: $(HTML)
 
