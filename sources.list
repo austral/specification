@@ -11,6 +11,8 @@ ref/intro.md
 ref/flow.md
 ref/binding.md
 ref/boolean.md
+ref/equality.md
+ref/order.md
 ref/math-modular.md
 ref/math-checked.md
 ref/math-saturation.md
