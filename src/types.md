@@ -14,8 +14,6 @@ and [`defdisjunction`](#op:defdisjunction).
 
 A type specifier is a &form; that denotes a type.
 
-## Interfaces {#type:interface}
-
 ## Type Constraints
 
 ## Affine Types
