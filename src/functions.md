@@ -92,16 +92,27 @@ A more extensively documented, equivalent function:
          (fibonacci (- n 2)))))
 ```
 
-## Interfaces, Generic Functions and Methods
+## Generic Functions
 
-### Interfaces
+### Examples
 
-#### Examples
+## Interfaces and Implementations ## {#fn:interface}
 
-### Generic Functions
+### Examples ### {#fn:interface-examples}
 
-#### Examples
+A bare definition of an interface for objects that can be printed to a stream:
 
-### Methods
+```
+(definterface printable (type)
+  ((print ((instance type) (stream stream)))))
+```
 
-#### Examples
+A definition with more documentation strings:
+
+```
+(definterface printable (type)
+  (:documentation "Printable objects.")
+
+  ((print ((instance type) (stream stream))
+    (:documentation "Print a representation of instance to stream."))))
+```

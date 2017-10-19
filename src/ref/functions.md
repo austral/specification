@@ -23,8 +23,8 @@
 : The function return type.
 
 `documentation`
-: The function's documentation expression. See [this section](#doc:concrete-fn)
-  for its description.
+: The function's documentation form. See [this section](#doc:concrete-fn) for
+  its description.
 
 #### Description
 
@@ -43,7 +43,7 @@ See [this section](#fn:concrete-examples).
 #### Syntax
 
 ```
-(definterface <name> (<type>*)
+(definterface <name> (<type>)
   [<documentation>]
   (<generic-function>*))
 
@@ -84,22 +84,7 @@ The `definterface` &specialop; defines an [interface](#type:interface).
 
 #### Examples
 
-A bare definition of an interface for objects that can be printed to a stream:
-
-```
-(definterface printable (T)
-  ((print ((instance T) (stream stream)))))
-```
-
-A definition with more documentation strings:
-
-```
-(definterface printable (T)
-  "Printable objects."
-
-  ((print ((instance T) (stream stream))
-    "Print a representation of instance to stream.")))
-```
+See [this section](#fn:interface-examples).
 
 #### See Also
 
@@ -113,7 +98,12 @@ A definition with more documentation strings:
 
 #### Description
 
+The `defimplementation` &specialop; defines an implementation of
+an [interface](#type:interface).
+
 #### Examples
+
+See [this section](#fn:interface-examples).
 
 #### See Also
 
