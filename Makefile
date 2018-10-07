@@ -49,7 +49,7 @@ $(BUILD):
 # We have a three staged compilation process: cat the macros.m4 file and all
 # source files together, run m4 on it, and run pandoc.
 $(TMP0): $(SOURCES)
-	cat $(MACROS) $(SOURCES) > $@
+	sed -e '$$s/$$/\n/' -s $(MACROS) $(SOURCES) > $@
 
 $(TMP1): $(TMP0)
 	m4 $^ > $@
