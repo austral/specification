@@ -4,6 +4,8 @@ This section describes Austral's syntax.
 
 ## Symbols
 
+
+
 Symbols in Austral can be made up of any of the following characters.
 
 - The letters `A` to `Z`, in lowercase and uppercase form.
@@ -75,18 +77,6 @@ If the decimal point is followed by the letter `f`, the type of the literal is
 `f32`. If it's followed by the letter `d`, the type of the literal is `f64`.
 
 #### Fixed-Point Numbers
-
-#### Complex Numbers
-
-Complex number literals use the prefix `#J` (pronounced "sharpsign J") a list
-form whose elements are the real and imaginary parts of the number.
-
-Examples:
-
-```
-#J(0 0)
-#J(1.0 -1.0)
-```
 
 ### Tuples
 
