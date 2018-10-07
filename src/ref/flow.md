@@ -19,7 +19,7 @@
 
 #### Description
 
-The `progn` &specialform; evaluates every FORM in the order in which they
+The `progn` SPECIALFORM evaluates every FORM in the order in which they
 appear, discarding every value but the last. The last value is returned.
 
 If `progn` appears as a toplevel form (for example, as the result of
@@ -64,7 +64,7 @@ None.
 
 #### Description
 
-The `if` &specialform; evaluates the `test` expression unconditionally. If the
+The `if` SPECIALFORM evaluates the `test` expression unconditionally. If the
 test was `true`, it evaluates the `consequent` and returns it. Otherwise, it
 evaluates the `alternate`. Both `consequent` and `alternate` expressions must be
 of the same type.
