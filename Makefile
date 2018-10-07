@@ -58,6 +58,7 @@ $(HTML_OUT): $(TMP1)
 
 $(PDF_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) \
+		--top-level-division=part \
 		-V papersize=a4 \
 		-V fontsize=12pt \
 		-V documentclass=book \
