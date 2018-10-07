@@ -132,7 +132,7 @@ name and (in the case of generic functions) its parameter and return types.
 #### Syntax
 
 ```
-(call <function> <args>*) ⇒ <result>
+(call <function> <args>*) ;; => <result>
 ```
 
 #### Parameters and Values
@@ -157,7 +157,7 @@ Assuming a definition of a concrete function `fact` with that takes an integer
 and returns its factorial:
 
 ```
-(call (fn fact) 5) ⇒ 120
+(call (fn fact) 5) ;; => 120
 ```
 
 #### See Also
