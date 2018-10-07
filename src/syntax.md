@@ -4,7 +4,19 @@ This section describes Austral's syntax.
 
 ## Symbols
 
+A symbol has two components: the module name and the symbol name. In source
+text, symbols come in two forms: unqualified and qualified.
 
+An unqualified symbol is just the symbol name, like `hello` or `foo`. Module
+resolution is performed after parsing to determine which module this symbol
+should belong to.
+
+A qualified symbol contains both the module name and the symbol name separated
+by a colon character (`:`), for example `library.net.http:response`.
+
+Note that in the case of qualfied symbols, the module name may be a nickname.
+
+### Module and Symbol Names
 
 Symbols in Austral can be made up of any of the following characters.
 
@@ -12,6 +24,11 @@ Symbols in Austral can be made up of any of the following characters.
 - The digits `0` to `9`.
 - The symbols `.`, `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `<`, `=`,
   `>`, `?`, `@`, `\`, `~`, `^`, `|`.
+
+## Keywords
+
+A keyword is a special type of symbol whose module name is the empty string,
+e.g. `:my-keyword`. Keywords are used extensively in definition forms.
 
 ## Literals
 
@@ -90,21 +107,6 @@ Examples:
 {0 3.14 "test"}
 {} ;; The empty tuple
 ```
-
-### Arrays
-
-Array literals use square brackets, and array elements are arbitrary
-whitespace-separated forms.
-
-Examples:
-
-```
-[1 2 3]
-[0.0 0.0 0.0]
-```
-
-The type of an array literal is a [fixed-size array](#type:fixed-size-array)
-with the same number of elements as in the literal form.
 
 ### Strings
 
