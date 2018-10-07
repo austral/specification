@@ -50,19 +50,21 @@ nominal equality.
 
 ## Built-in Types
 
-### Unit
+### Scalar Types
 
-#### Type Specifier
+#### Unit
+
+##### Type Specifier
 
 ```
 unit
 ```
 
-#### Parameters
+##### Parameters
 
 None.
 
-#### Description
+##### Description
 
 The *unit type*, denoted `unit`, is a type that only allows one value. The *unit
 constant* is `nil`.

@@ -1,10 +1,13 @@
 # Introduction
 
-Austral is a low-level, statically-typed, memory safe, compiled dialect of Lisp.
+Austral is a low-level, statically-typed, memory safe, compiled dialect of
+Lisp. Aesthetically it derives from Common Lisp, but its type system is closest
+to that of Haskell. Memory and resource safety is achieved through the use of
+linear types.
 
-## Design
+## Conventions
 
-## Notational Conventions
+### Notational Conventions
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
