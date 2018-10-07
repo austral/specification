@@ -1,4 +1,6 @@
-# Appendix C: Symbols Exported by the `austral` Module
+# Appendix B: Symbols Exported by Built-in Modules
+
+## The `austral` module
 
 - `progn`
 - `if`
