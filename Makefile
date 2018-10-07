@@ -38,7 +38,6 @@ SOURCES := src/book.md \
 	   src/ref/features.md \
 	   src/documentation.md \
 	   src/glossary.md \
-	   src/name-mangling.md \
 	   src/exported.md
 
 .DEFAULT_GOAL := all
