@@ -57,7 +57,9 @@ $(HTML_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t html $(PANDOC_FLAGS) -o $@
 
 $(PDF_OUT): $(TMP1)
-	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $@
+	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) \
+		-V documentclass=book\
+		-o $@
 
 all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
 
