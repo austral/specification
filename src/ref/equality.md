@@ -29,8 +29,8 @@ built-in floating-point types.
 #### Examples
 
 ```
-(peq 3.14 3.14) ⇒ true
-(peq NaN NaN)   ⇒ false
+(peq 3.14 3.14) ;; => true
+(peq NaN NaN)   ;; => false
 ```
 
 ### `total-equivalence`
@@ -60,9 +60,9 @@ in scalar types.
 #### Examples
 
 ```
-(eq true true) ⇒ true
-(eq 10 10)     ⇒ true
-(eq 10 3)      ⇒ false
+(eq true true) ;; => true
+(eq 10 10)     ;; => true
+(eq 10 3)      ;; => false
 
 (eq 3.14 3.14) ;; Compilation error: no implementation of total-equivalence for
                ;; the type f64
