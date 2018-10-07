@@ -15,7 +15,7 @@
 
 #### Description
 
-The `and` &specialop; evaluates forms one at a time, from left to right,
+The `and` SPECIALOP evaluates forms one at a time, from left to right,
 returning `false` as soon as a form evaluates to `false`. If all forms evaluate
 to `true`, it returns `true`.
 
@@ -47,7 +47,7 @@ to `true`, it returns `true`.
 
 #### Description
 
-The `or` &specialop; evaluates forms one at a time, from left to right,
+The `or` SPECIALOP evaluates forms one at a time, from left to right,
 returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
 `false`, it returns `false`.
 
