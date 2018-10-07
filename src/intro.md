@@ -19,20 +19,17 @@ interpreted as described in [RFC 2119][rfc2119].
 
 In syntax definitions, the following rules are used:
 
-1. Text in angular brackets represents a variable, eg. `<var>`, `<args>`,
+1. Text in angular brackets represents a non-terminal, e.g. `<var>`, `<args>`,
    `<val>`.
 
-2. The following quantifiers, when found after an expression, represent that the
-   expression:
+2. The character `*` (the asterisk) appearing after an expression indicates it
+   may occur zero or more times.
 
-    `+`
-    : Appears at least once.
+3. The character `+` (the plus sign) appearing after an expression indicates it must occur at least once.
 
-    `*`
-    : Appears any number of times.
+4. Curly brackets are used to group expressions.
 
-3. Curly brackets are used to group expressions.
-4. Square brackets denote optional expressions.
+5. Square brackets denote optional expressions.
 
 ### Metasyntactic Variables
 
