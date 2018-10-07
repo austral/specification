@@ -38,8 +38,8 @@ SOURCES := src/book.md \
 	   src/ref/effects.md \
 	   src/ref/features.md \
 	   src/documentation.md \
-	   src/glossary.md \
-	   src/exported.md
+	   src/appendix/glossary.md \
+	   src/appendix/exported.md
 
 .DEFAULT_GOAL := all
 
