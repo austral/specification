@@ -11,7 +11,7 @@
 #### Parameters and Values
 
 `exp`
-: An expression of type &boolean;.
+: An expression of type BOOLEAN.
 
 #### Description
 
@@ -43,7 +43,7 @@ to `true`, it returns `true`.
 #### Parameters and Values
 
 `exp`
-: An expression of type &boolean;.
+: An expression of type BOOLEAN.
 
 #### Description
 
@@ -75,7 +75,7 @@ returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
 #### Parameters and Values
 
 `form`
-: An expression of type &boolean;.
+: An expression of type BOOLEAN.
 
 #### Description
 
