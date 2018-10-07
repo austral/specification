@@ -4,7 +4,7 @@ TMP1     := $(BUILD)/tmp1.md
 HTML_OUT := $(BUILD)/spec.html
 PDF_OUT  := $(BUILD)/spec.pdf
 
-PANDOC_FLAGS := --standalone --smart --table-of-contents --variable urlcolor=cyan
+PANDOC_FLAGS := --standalone --table-of-contents --variable urlcolor=cyan
 
 MACROS := macros.m4
 SOURCES := src/book.md \
