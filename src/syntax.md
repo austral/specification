@@ -25,7 +25,7 @@ Symbols in Austral can be made up of any of the following characters.
 - The symbols `.`, `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `<`, `=`,
   `>`, `?`, `@`, `\`, `~`, `^`, `|`.
 
-## Keywords
+### Keywords
 
 A keyword is a special type of symbol whose module name is the empty string,
 e.g. `:my-keyword`. Keywords are used extensively in definition forms.
