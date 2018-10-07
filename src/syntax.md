@@ -2,7 +2,7 @@
 
 This section describes Austral's syntax.
 
-## Symbols
+## Symbols ## {#syntax:symbols}
 
 A symbol has two components: the module name and the symbol name. In source
 text, symbols come in two forms: unqualified and qualified.
