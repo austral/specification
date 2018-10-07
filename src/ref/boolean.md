@@ -24,7 +24,7 @@ to `true`, it returns `true`.
 ```
 (and true true)   ⇒ true
 (and true false)  ⇒ false
-(and false false) ⇒ false
+(and false false) ;; => false
 ```
 
 #### See Also
@@ -54,9 +54,9 @@ returning `true` as soon as a form evaluates to `true`. If all forms evaluate to
 #### Examples
 
 ```
-(or true false)  ⇒ true
-(or true true)   ⇒ true
-(or false false) ⇒ false
+(or true false)  ;; => true
+(or true true)   ;; => true
+(or false false) ;; => false
 ```
 
 #### See Also
@@ -84,7 +84,7 @@ The `not` function returns `true` if its argument is false, `false` otherwise.
 #### Examples
 
 ```
-(not true) ⇒ false
+(not true) ;; => false
 ```
 
 #### See Also
