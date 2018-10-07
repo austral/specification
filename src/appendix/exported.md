@@ -5,8 +5,6 @@
 - `progn`
 - `if`
 - `cond`
-- `when`
-- `unless`
 - `let`
 - `defconstant`
 - `and`
