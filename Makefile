@@ -64,6 +64,7 @@ $(PDF_OUT): $(TMP1)
 		-V fontsize=12pt \
 		-V documentclass=book \
 		-V mainfont="Times New Roman" \
+		-V monofont="Source Sans Pro" \
 		-o $@
 
 all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
