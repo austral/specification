@@ -28,7 +28,7 @@
 
 #### Description
 
-The `defun` &specialop; defines a [concrete function](#fn:concrete).
+The `defun` SPECIALOP defines a [concrete function](#fn:concrete).
 
 If the `body` is omitted, the form is treated as a forward declaration. A future
 `defun` form, with the same arguments and a function body, can be used to
@@ -80,7 +80,7 @@ See [this section](#fn:concrete-examples).
 
 #### Description
 
-The `definterface` &specialop; defines an [interface](#type:interface).
+The `definterface` SPECIALOP defines an [interface](#type:interface).
 
 #### Examples
 
@@ -98,7 +98,7 @@ See [this section](#fn:interface-examples).
 
 #### Description
 
-The `defimplementation` &specialop; defines an implementation of
+The `defimplementation` SPECIALOP defines an implementation of
 an [interface](#type:interface).
 
 #### Examples
