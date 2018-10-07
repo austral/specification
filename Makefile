@@ -59,7 +59,7 @@ $(HTML_OUT): $(TMP1)
 $(PDF_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) \
 		-V papersize=a4 \
-		-V documentclass=book\
+		-V documentclass=book \
 		-o $@
 
 all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
