@@ -73,7 +73,7 @@ slot := (<slot> <type> <slot-docstring>)
 
 #### Description
 
-The `defrecord` &specialop; defines a new [record type](#type:record).
+The `defrecord` SPECIALOP defines a new [record type](#type:record).
 
 If the definition omits the slot list, the record is assumed to be a
 forward-declared record. No operations can be defined on it until the complete
@@ -232,7 +232,7 @@ while `(the (either i32 f32) (right 3.f14))` would instantiate the right case.
 
 #### Description
 
-The `defmagnitude` &specialop; defines a magntiude. A magnitude represents a
+The `defmagnitude` SPECIALOP defines a magntiude. A magnitude represents a
 physical property that can be quantified, e.g. length or mass. Magnitudes can be
 represented by different units.
 
@@ -264,7 +264,7 @@ represented by different units.
 
 #### Description
 
-The `defunit` &specialop; defines a new unit of a specific magnitude.
+The `defunit` SPECIALOP defines a new unit of a specific magnitude.
 
 Units can have multiple nicknames, for instance, `m` can be defined as a
 nickname for `meter`.

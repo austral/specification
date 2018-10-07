@@ -23,7 +23,7 @@ Other &forms; are allowed at the top level:
 
 1. Arbitrary macros can be macroexpanded at the toplevel.
 
-2. The [`progn`](#op:progn) &specialop; can also appear at the toplevel, and its
+2. The [`progn`](#op:progn) SPECIALOP can also appear at the toplevel, and its
    contents are treated, recursively, as special forms. Naturally, a
    toplevel [`progn`](#op:progn) returns no values.
 

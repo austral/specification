@@ -45,7 +45,7 @@
 
 #### Description
 
-The `defmodule` &specialop; defines a new module.
+The `defmodule` SPECIALOP defines a new module.
 
 #### Examples
 
@@ -64,7 +64,7 @@ The `defmodule` &specialop; defines a new module.
 
 #### Description
 
-The `in-module` &specialop; changes the current module to the module named
+The `in-module` SPECIALOP changes the current module to the module named
 `name`.
 
 #### Examples

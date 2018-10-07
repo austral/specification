@@ -135,7 +135,7 @@ case := (<test> <consequent>*)
 
 #### Description
 
-The `cond` &specialop; evaluates `test` forms one at a time, in the order in
+The `cond` SPECIALOP evaluates `test` forms one at a time, in the order in
 which they appear, until one of them evaluates to `true`. The `consequent`
 corresponding to that test is evaluated and returned as the value of the `cond`
 expression. If no `test` form evaluates to `true`, the `default` form is
