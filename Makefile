@@ -1,6 +1,6 @@
 BUILD    := build
-TMP0     := $(BUILD)/source0.md
-TMP1     := $(BUILD)/source1.md
+TMP0     := $(BUILD)/tmp0.md
+TMP1     := $(BUILD)/tmp1.md
 HTML_OUT := $(BUILD)/spec.html
 PDF_OUT  := $(BUILD)/spec.pdf
 
@@ -16,23 +16,19 @@ $(BUILD):
 
 # We have a three staged compilation process: cat the macros.m4 file and all
 # source files together, run m4 on it, and run pandoc.
-$(TMP0): $(MACROS) $(SOURCE_LIST)
-	cat $^ > $@
+$(TMP0): $(BUILD)
+	cat $(MACROS) $(SOURCE_LIST) > $@
 
 $(TMP1): $(TMP0)
 	m4 $^ > $@
 
-$(HTML): $(BUILD) $(TMP1)
+$(HTML_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t html $(PANDOC_FLAGS) -o $@
 
-$(PDF): $(BUILD) $(TMP1)
+$(PDF_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $@
 
-html: $(HTML)
-
-pdf: $(PDF)
-
-all: html pdf
+all: $(HTML_OUT) $(PDF_OUT)
 
 clean:
 	rm -rf $(BUILD)
