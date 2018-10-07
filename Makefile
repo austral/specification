@@ -16,7 +16,6 @@ SOURCES := src/book.md \
 	   src/functions.md \
 	   src/memory.md \
 	   src/modules.md \
-	   src/effects.md \
 	   src/ref/intro.md \
 	   src/ref/flow.md \
 	   src/ref/binding.md \
