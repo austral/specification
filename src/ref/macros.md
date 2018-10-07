@@ -72,7 +72,7 @@ The `defmacro` form defines a new macro.
 
 #### Description
 
-The `define-symbol-macro` &specialform; associates a SYMBOL `name` with a
+The `define-symbol-macro` SPECIALFORM associates a SYMBOL `name` with a
 FORM `form`. After macroexpansion, all instances of `symbol` are replaced with
 `form`.
 
