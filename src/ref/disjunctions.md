@@ -28,12 +28,12 @@
 
 #### Description
 
-The `case` &specialform; allows accessing the values of a disjunction in each of
+The `case` SPECIALFORM allows accessing the values of a disjunction in each of
 its cases.
 
 An invocation of `case` must exhaustively list all cases of the disjunction.
 
-The bodies of all cases of the `case` &specialform; must have the same type.
+The bodies of all cases of the `case` SPECIALFORM must have the same type.
 
 #### Examples
 
