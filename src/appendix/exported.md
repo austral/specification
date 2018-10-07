@@ -1,4 +1,4 @@
-# Appendix B: Symbols Exported by Built-in Modules
+# Appendix B: Exported Symbols
 
 ## The `austral` module
 
