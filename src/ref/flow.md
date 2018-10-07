@@ -128,10 +128,10 @@ case := (<test> <consequent>*)
 : An expression of type &boolean;.
 
 `consequent`
-: An &iprogn;.
+: An IPROGN.
 
 `default`
-: An &iprogn;.
+: An IPROGN.
 
 #### Description
 
