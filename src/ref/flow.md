@@ -19,11 +19,11 @@
 
 #### Description
 
-The `progn` &specialform; evaluates every &form; in the order in which they
+The `progn` &specialform; evaluates every FORM in the order in which they
 appear, discarding every value but the last. The last value is returned.
 
 If `progn` appears as a toplevel form (for example, as the result of
-macroexpansion), all of its &forms; are considered toplevel forms.
+macroexpansion), all of its FORMS are considered toplevel forms.
 
 #### Examples
 
@@ -72,7 +72,7 @@ of the same type.
 Branch prediction information can be provided to the compiler, which MAY
 (depending on the implementation, the underlying ISA, and machine description)
 generate code that takes advantage of it. To provide branch prediction
-information, it suffices to replace the `test` &form; with the &form; `(:likely
+information, it suffices to replace the `test` FORM with the FORM `(:likely
 <test>)` to indicate the `test` is likely to evaluate to `true`, and `(:unlikely
 <test>)` otherwise.
 
