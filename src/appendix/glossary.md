@@ -16,7 +16,7 @@ A list of adjacent forms, evaluated as if within a [`progn`](#op:progn).
 
 ### Special Form ### {#g:special-form}
 
-A list with special evaluation rules. The first element of a special form is a
+A form with special evaluation rules. The first element of a special form is a
 SPECIALOP.
 
 ### Special Operator ### {#g:special-operator}
