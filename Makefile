@@ -35,4 +35,4 @@ pdf: $(PDF)
 all: html pdf
 
 clean:
-	rm -rgit sf $(BUILD)
+	rm -rf $(BUILD)
