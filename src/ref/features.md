@@ -1,32 +1,5 @@
 ## Features
 
-### `provide` {#op:provide}
-
-#### Syntax
-
-```
-(provide <feature>)
-```
-
-#### Parameters and Values
-
-`feature`
-: The feature name, a symbol.
-
-#### Description
-
-The `provide` &specialop; adds the feature `feature` to the compiler's feature
-set.
-
-Repeated invocations of `provide` with the same feature name MUST produce a
-warning to the user.
-
-#### Examples
-
-#### See Also
-
-- [`compiler-cond`](#op:compiler-cond)
-
 ### `compiler-cond` {#op:compiler-cond}
 
 #### Syntax
@@ -75,4 +48,4 @@ If no `test` expression evaluates to true, the expression is replaced with the
 
 #### See Also
 
-- [provide](#op:provide)
+None.
