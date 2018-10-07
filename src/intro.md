@@ -5,15 +5,19 @@ Lisp. Aesthetically it derives from Common Lisp, but its type system is closest
 to that of Haskell. Memory and resource safety is achieved through the use of
 linear types.
 
-## Conventions
+## Organization of the Document
 
-### Notational Conventions
+## Notational Conventions
+
+### Requirements Terminology
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119][rfc2119].
 
-Specially in syntax definitions, the following rules are used:
+### Syntax Definitions
+
+In syntax definitions, the following rules are used:
 
 1. Text in angular brackets represents a variable, eg. `<var>`, `<args>`,
    `<val>`.
@@ -29,6 +33,11 @@ Specially in syntax definitions, the following rules are used:
 
 3. Curly brackets are used to group expressions.
 4. Square brackets denote optional expressions.
+
+### Metasyntactic Variables
+
+Words such as "foo", "bar", "baz" have no semantic meaning and should be
+interpreted as placeholders for user-defined names or values.
 
 ## Differences from Common Lisp
 
