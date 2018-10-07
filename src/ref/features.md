@@ -22,7 +22,7 @@
 
 #### Description
 
-The `compiler-cond` &specialop; evaluates the `test` expressions in sequential
+The `compiler-cond` SPECIALOP evaluates the `test` expressions in sequential
 order. If one such expression evaluates to true, the entire form is replaced
 with the corresponding `form`.
 
