@@ -7,7 +7,39 @@ PDF_OUT  := $(BUILD)/spec.pdf
 PANDOC_FLAGS := --standalone --smart --table-of-contents --variable urlcolor=cyan
 
 MACROS := macros.m4
-SOURCES := $(addprefix src/, $(shell cat sources.list))
+SOURCES := src/book.md \
+           src/intro.md \
+	   src/syntax.md \
+	   src/compilation.md \
+	   src/types.md \
+	   src/functions.md \
+	   src/memory.md \
+	   src/modules.md \
+	   src/effects.md \
+	   src/ref/intro.md \
+	   src/ref/flow.md \
+	   src/ref/binding.md \
+	   src/ref/boolean.md \
+	   src/ref/equality.md \
+	   src/ref/order.md \
+	   src/ref/math-modular.md \
+	   src/ref/math-checked.md \
+	   src/ref/math-saturation.md \
+	   src/ref/math-float.md \
+	   src/ref/bitwise.md \
+	   src/ref/functions.md \
+	   src/ref/types.md \
+	   src/ref/macros.md \
+	   src/ref/modules.md \
+	   src/ref/tuples.md \
+	   src/ref/disjunctions.md \
+	   src/ref/memory.md \
+	   src/ref/effects.md \
+	   src/ref/features.md \
+	   src/documentation.md \
+	   src/glossary.md \
+	   src/name-mangling.md \
+	   src/exported.md
 
 .DEFAULT_GOAL := all
 
