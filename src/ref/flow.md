@@ -5,7 +5,7 @@
 #### Syntax
 
 ```
-(progn <exp>*) ⇒ <result>
+(progn <exp>*) ;; => <result>
 ```
 
 #### Parameters and Values
@@ -28,8 +28,8 @@ macroexpansion), all of its &forms; are considered toplevel forms.
 #### Examples
 
 ```
-(progn)       ⇒ nil
-(progn 1 2 3) ⇒ 3
+(progn)       ;; => nil
+(progn 1 2 3) ;; => 3
 ```
 
 #### See Also
@@ -41,11 +41,11 @@ None.
 #### Syntax
 
 ```
-(if <test> <consequent> <alternate>) ⇒ <result>
+(if <test> <consequent> <alternate>) ;; => <result>
 
-(if (:likely <test>) <consequent> <alternate>) ⇒ <result>
+(if (:likely <test>) <consequent> <alternate>) ;; => <result>
 
-(if (:unlikely <test>) <consequent> <alternate>) ⇒ <result>
+(if (:unlikely <test>) <consequent> <alternate>) ;; => <result>
 ```
 
 #### Parameters and Values
@@ -79,9 +79,9 @@ information, it suffices to replace the `test` &form; with the &form; `(:likely
 #### Examples
 
 ```
-(if true 1 0) ⇒ 1
+(if true 1 0) ;; => 1
 
-(if false 1 0) ⇒ 0
+(if false 1 0) ;; => 0
 ```
 
 Using branch prediction hints:
