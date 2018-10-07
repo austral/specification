@@ -7,7 +7,7 @@ PDF_OUT  := $(BUILD)/spec.pdf
 PANDOC_FLAGS := --standalone --smart --table-of-contents --variable urlcolor=cyan
 
 MACROS := macros.m4
-SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
+SOURCES := $(addprefix src/, $(shell cat sources.list))
 
 .DEFAULT_GOAL := all
 
@@ -16,8 +16,8 @@ $(BUILD):
 
 # We have a three staged compilation process: cat the macros.m4 file and all
 # source files together, run m4 on it, and run pandoc.
-$(TMP0): $(BUILD)
-	cat $(MACROS) $(SOURCE_LIST) > $@
+$(TMP0): $(SOURCES)
+	cat $(MACROS) $(SOURCES) > $@
 
 $(TMP1): $(TMP0)
 	m4 $^ > $@
@@ -28,7 +28,7 @@ $(HTML_OUT): $(TMP1)
 $(PDF_OUT): $(TMP1)
 	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $@
 
-all: $(HTML_OUT) $(PDF_OUT)
+all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
 
 clean:
 	rm -rf $(BUILD)
