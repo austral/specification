@@ -5,7 +5,7 @@
 #### Syntax
 
 ```
-(tuple <exp>*) ⇒ <result>
+(tuple <exp>*) ;; => <result>
 ```
 
 #### Parameters and Values
@@ -71,7 +71,7 @@ element.
 #### Examples
 
 ```
-(proj {1 2 3} 1) ⇒ 1
+(proj {1 2 3} 1) ;; => 1
 ```
 
 #### See Also
