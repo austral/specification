@@ -32,7 +32,7 @@ to `true`, it returns `true`.
 - [`or`](#op:or)
 - [`not`](#op:not)
 
-### `or` {#op:and}
+### `or` {#op:or}
 
 #### Syntax
 
