@@ -11,7 +11,7 @@ linear types.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC 2119.
+interpreted as described in [RFC 2119][rfc2119].
 
 Specially in syntax definitions, the following rules are used:
 
@@ -42,3 +42,5 @@ Specially in syntax definitions, the following rules are used:
   syntactic role in Austral and is a valid component of symbols.
 
 ## Acknowledgements
+
+[rfc2119]: https://tools.ietf.org/html/rfc2119
