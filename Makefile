@@ -66,7 +66,11 @@ $(PDF_OUT): $(TMP1)
 		-V mainfont="Times New Roman" \
 		-o $@
 
-all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
+html: $(HTML_OUT)
+
+pdf: $(PDF_OUT)
+
+all: $(BUILD) html
 
 clean:
 	rm -rf $(BUILD)
