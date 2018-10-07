@@ -5,7 +5,7 @@ explicitly check for overflow.
 
 The `checked-arithmetic` interface defines arithmetic operations with explicit
 overflow checking. Each operation returns a [tuple](#type:tuple) of a number and
-a &boolean; indicating whether overflow has occurred.
+a BOOLEAN indicating whether overflow has occurred.
 
 When overflow has occurred, the value of the number in the [tuple](#type:tuple)
 us always the zero value of that type.
