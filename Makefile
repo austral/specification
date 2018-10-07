@@ -1,38 +1,38 @@
 BUILD    := build
 TMP0     := $(BUILD)/source0.md
-TMP      := $(BUILD)/source.md
-HTML     := $(BUILD)/spec.html
-PDF      := $(BUILD)/spec.pdf
-
-FILTER   := $(shell awk -f script.awk abbrevs.txt)
+TMP1     := $(BUILD)/source1.md
+HTML_OUT := $(BUILD)/spec.html
+PDF_OUT  := $(BUILD)/spec.pdf
 
 PANDOC_FLAGS := --standalone --smart --table-of-contents --variable urlcolor=cyan
 
+MACROS := macros.m4
 SOURCE_LIST := $(addprefix src/, $(shell cat sources.list))
 
 .DEFAULT_GOAL := all
 
-
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(TMP0): $(SOURCE_LIST)
-	sed -s '$$G' $(SOURCE_LIST) > $(TMP0)
+# We have a three staged compilation process: cat the macros.m4 file and all
+# source files together, run m4 on it, and run pandoc.
+$(TMP0): $(MACROS) $(SOURCE_LIST)
+	cat $^ > $@
 
-$(TMP): $(TMP0)
-	cat $(TMP0) $(FILTER) > $(TMP)
+$(TMP1): $(TMP0)
+	m4 $^ > $@
 
-$(HTML): $(BUILD) $(TMP)
-	pandoc $(TMP) -f markdown -t html $(PANDOC_FLAGS) -o $(HTML)
+$(HTML): $(BUILD) $(TMP1)
+	pandoc $(TMP1) -f markdown -t html $(PANDOC_FLAGS) -o $@
 
-$(PDF): $(BUILD) $(TMP)
-	pandoc $(TMP) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $(PDF)
+$(PDF): $(BUILD) $(TMP1)
+	pandoc $(TMP1) -f markdown -t latex --latex-engine=xelatex $(PANDOC_FLAGS) -o $@
 
 html: $(HTML)
 
 pdf: $(PDF)
 
-all: html
+all: html pdf
 
 clean:
-	rm -rf $(BUILD)
+	rm -rgit sf $(BUILD)
