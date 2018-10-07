@@ -5,6 +5,7 @@ HTML_OUT := $(BUILD)/spec.html
 PDF_OUT  := $(BUILD)/spec.pdf
 
 PANDOC_FLAGS := --standalone --table-of-contents --variable urlcolor=cyan
+INPUT_FORMAT := markdown
 
 MACROS := macros.m4
 SOURCES := src/book.md \
