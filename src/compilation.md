@@ -19,7 +19,7 @@ The following special forms can only appear at the toplevel:
 - [`define-symbol-macro`](#op:define-symbol-macro)
 - [`provide`](#op:provide)
 
-Other &forms; are allowed at the top level:
+Other FORMS are allowed at the top level:
 
 1. Arbitrary macros can be macroexpanded at the toplevel.
 
