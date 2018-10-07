@@ -26,4 +26,4 @@ FORM as a special form.
 
 ### Symbol ### {#g:symbol}
 
-An identifier.
+An identifier. See the section on [symbol syntax](#syntax:symbols).
