@@ -22,8 +22,8 @@ to `true`, it returns `true`.
 #### Examples
 
 ```
-(and true true)   ⇒ true
-(and true false)  ⇒ false
+(and true true)   ;; => true
+(and true false)  ;; => false
 (and false false) ;; => false
 ```
 
