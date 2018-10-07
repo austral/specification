@@ -45,7 +45,7 @@ value.
 #### Examples
 
 ```
-(load (allocate 10)) ⇒ 10
+(load (allocate 10)) ;; => 10
 ```
 
 ### `borrowing`
