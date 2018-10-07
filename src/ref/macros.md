@@ -26,19 +26,19 @@
 #### Parameters and Values
 
 `name`
-: The macro name, a &symbol;.
+: The macro name, a SYMBOL.
 
 `documentation`
 : An optional documentation string.
 
 `param-name`
-: The name of a parameter, a &symbol;.
+: The name of a parameter, a SYMBOL.
 
 `default`
 : The default value of a keyword parameter.
 
 `form`
-: An arbitrary &form;.
+: An arbitrary FORM.
 
 #### Description
 
@@ -62,18 +62,18 @@ The `defmacro` form defines a new macro.
 #### Parameters and Values
 
 `name`
-: The macro name, a non-keyword &symbol;.
+: The macro name, a non-keyword SYMBOL.
 
 `form`
-: An arbitrary &form;.
+: An arbitrary FORM.
 
 `documentation`
 : An optional documentation string.
 
 #### Description
 
-The `define-symbol-macro` &specialform; associates a &symbol; `name` with a
-&form; `form`. After macroexpansion, all instances of `symbol` are replaced with
+The `define-symbol-macro` &specialform; associates a SYMBOL `name` with a
+FORM `form`. After macroexpansion, all instances of `symbol` are replaced with
 `form`.
 
 #### Examples
