@@ -63,6 +63,7 @@ $(PDF_OUT): $(TMP1)
 		-V papersize=a4 \
 		-V fontsize=12pt \
 		-V documentclass=book \
+		-V mainfont="Times New Roman" \
 		-o $@
 
 all: $(BUILD) $(HTML_OUT) $(PDF_OUT)
