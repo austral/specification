@@ -98,6 +98,19 @@ A more extensively documented, equivalent function:
 
 ## Interfaces and Implementations ## {#fn:interface}
 
+Interfaces and implementations are similar to typeclasses in Haskell and traits
+in Rust.
+
+An interface has one, and only one, type parameter.
+
+When defining an implementation, the supplied type argument must be one of:
+
+1. A concrete type specifier.
+2. A type variable.
+3. A type constructor applied to a set of distinct type variables.
+
+These restrictions are similar to those of Haskell 98 typeclasses.
+
 ### Examples ### {#fn:interface-examples}
 
 A bare definition of an interface for objects that can be printed to a stream:
