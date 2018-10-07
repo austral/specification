@@ -53,7 +53,7 @@
 #### Syntax
 
 ```
-(log-not <value>) ⇒ <result>
+(log-not <value>) ;; => <result>
 ```
 
 #### Parameters and Values
