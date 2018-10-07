@@ -313,7 +313,7 @@ potentially different types.
 #### Examples
 
 ```
-(the u8 23) ⇒ 23 : u8
+(the u8 23) ;; => 23 : u8
 ```
 
 #### See Also
