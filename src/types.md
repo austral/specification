@@ -4,7 +4,7 @@ A type is a (potentially infinite) set of objects. An object belongs to a single
 type.
 
 Austral has no first-class type values: types are denoted through type
-specifiers, which are &forms; that represent types.
+specifiers, which are FORMS that represent types.
 
 New types can be defined
 with [`deftype`](#op:deftype), [`defrecord`](#op:defrecord)
@@ -12,7 +12,7 @@ and [`defdisjunction`](#op:defdisjunction).
 
 ## Type Specifiers
 
-A type specifier is a &form; that denotes a type.
+A type specifier is a FORM that denotes a type.
 
 ## Type Constraints
 
