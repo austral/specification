@@ -29,5 +29,4 @@
 - `allocate`
 - `load`
 - `borrowing`
-- `provide`
 - `compiler-cond`
