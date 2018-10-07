@@ -22,8 +22,8 @@ Symbols in Austral can be made up of any of the following characters.
 
 - The letters `A` to `Z`, in lowercase and uppercase form.
 - The digits `0` to `9`.
-- The symbols `.`, `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `<`, `=`,
-  `>`, `?`, `@`, `\`, `~`, `^`, `|`.
+- Any of the following symbols: `!`, `%`, `&`, `$`, `#`, `+`, `-`, `*`, `/`,
+  `<`, `=`, `>`, `?`, `@`, `\\`, `` ` ``, `~`, `^`, `|`.
 
 ### Keywords
 
