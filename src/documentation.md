@@ -1,11 +1,11 @@
 # Documentation #
 
-Austral supports structured documentation &forms;.
+Austral supports structured documentation FORMS.
 
 ## Documentation Form Syntax ##
 
 In every case, a documentation form is either a string literal, or the more
-complex structured &form; described in the *Syntax* subsections below.
+complex structured FORM described in the *Syntax* subsections below.
 
 ### Concrete Functions ### {#doc:concrete-fn}
 
