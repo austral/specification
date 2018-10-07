@@ -7,7 +7,9 @@ linear types.
 
 ## Organization of the Document
 
-## Notational Conventions
+## Conventions
+
+This section describes conventions used throughout the document.
 
 ### Requirements Terminology
 
@@ -37,6 +39,8 @@ Words such as "foo", "bar", "baz" have no semantic meaning and should be
 interpreted as placeholders for user-defined names or values.
 
 ## Differences from Common Lisp
+
+### Syntax
 
 - In Common Lisp, the single quote character (`'`) is a reader macro character
   used as a shorthand for the `quote` special operator. In Austral, there is no
