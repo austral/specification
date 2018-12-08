@@ -24,7 +24,7 @@ from C.
 #### Type Specifier
 
 ```
-(address <type>)
+(paddress <type>)
 ```
 
 #### Parameters
