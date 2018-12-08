@@ -13,10 +13,14 @@ body {
     font-size: 1.5em;
 }
 
+#TOC {
+    font-size: 1.5em;
+}
+
 /* Frontmatter */
 
 #title-block-header {
-    margin: 30vh auto;
+    margin: 20vh auto;
     text-align: center;
 }
 
@@ -24,4 +28,5 @@ body {
 
 #TOC {
     margin: 0 auto;
+    width: 50%;
 }
