@@ -24,45 +24,40 @@ body {
 }
 
 #title-block-header h1 {
-    font-size: 3em;
+    font-size: 54px;
 }
 
 #title-block-header .author {
-    font-size: 1.4em;
+    font-size: 25px;
 }
 
 #TOC {
-    font-size: 1.3em;
+    font-size: 23px;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 72px;
 }
 
 h2 {
-    font-size: 3.33em;
+    font-size: 60px;
 }
 
 h3 {
-    font-size: 2.66em;
+    font-size: 48px;
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 36px;
     margin: 15px 0;
 }
 
-h5 {
-    font-size: 1.6em;
-    margin: 5px 0;
-}
-
-section p, section li, section dt, section dl {
-    font-size: 1.3em;
+section p {
+    font-size: 23px;
 }
 
 section code {
-    font-size: 0.9em;
+    font-size: 21px;
 }
 
 /* General Layout */
@@ -93,3 +88,16 @@ body {
 }
 
 /* Body */
+
+/* Links */
+
+a {
+    color: blue;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 0 3px;
+}
+
+a:hover {
+    border: 1px solid black;
+}
