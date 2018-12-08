@@ -52,6 +52,10 @@ h4 {
     margin: 15px 0;
 }
 
+section h1 code, section h2 code, section h3 code, section h4 code {
+    font-size: inherit;
+}
+
 section p, section li, section dt, section dd {
     font-size: 23px;
 }
