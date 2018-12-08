@@ -10,11 +10,15 @@ To generate the HTML version of the spec, run:
 $ make
 ```
 
+The result will be the `build/spec.html` file.
+
 To generate the PDF version, run:
 
 ```bash
 $ make pdf
 ```
+
+The result will be the `build/spec.pdf` file.
 
 And as always, to remove build output, run:
 
