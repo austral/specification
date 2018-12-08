@@ -4,6 +4,8 @@ TMP1     := $(BUILD)/tmp1.md
 HTML_OUT := $(BUILD)/spec.html
 PDF_OUT  := $(BUILD)/spec.pdf
 
+CSS := style.css
+
 PANDOC_FLAGS := --standalone --self-contained --table-of-contents --toc-depth=4 --variable urlcolor=cyan
 INPUT_FORMAT := markdown+smart
 
@@ -53,8 +55,8 @@ $(TMP0): $(SOURCES)
 $(TMP1): $(TMP0)
 	m4 $^ > $@
 
-$(HTML_OUT): $(TMP1)
-	pandoc $(TMP1) -f $(INPUT_FORMAT) -t html $(PANDOC_FLAGS) --css style.css -o $@
+$(HTML_OUT): $(TMP1) $(CSS)
+	pandoc $(TMP1) -f $(INPUT_FORMAT) -t html $(PANDOC_FLAGS) --css $(CSS) -o $@
 
 $(PDF_OUT): $(TMP1)
 	pandoc $(TMP1) -f $(INPUT_FORMAT) -t latex --pdf-engine=xelatex $(PANDOC_FLAGS) \

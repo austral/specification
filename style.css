@@ -8,4 +8,9 @@
   box-sizing: border-box;
 }
 
-/* Style */
+/* Frontmatter */
+
+#title-block-header {
+    margin: 30px;
+    text-align: center;
+}
