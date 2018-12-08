@@ -186,6 +186,12 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Parameters and Values
 
+`paddress`
+:   The positive address to write to.
+
+`value`
+:   The value to store at the given address.
+
 #### Description
 
 #### Examples
