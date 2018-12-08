@@ -12,7 +12,7 @@ from C.
 
 #### Description
 
-### `paddress`
+### `paddress` ### {#cffi:address}
 
 #### Type Specifier
 
