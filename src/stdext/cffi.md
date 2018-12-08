@@ -36,6 +36,8 @@ The `address` type represents a potentially null address in memory.
 
 #### Description
 
+The `paddress` type represents a positive (that is, non-null) address in memory.
+
 ### `defcfun`
 
 #### Syntax
