@@ -12,7 +12,7 @@
 - `not`
 - `defun`
 - `defclass`
-- `defimplementation`
+- `definstance`
 - `deftype`
 - `defrecord`
 - `defdisjunction`
