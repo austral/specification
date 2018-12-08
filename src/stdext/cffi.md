@@ -180,6 +180,10 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Syntax
 
+```
+(store <paddress> <value>) ;; => <value>
+```
+
 #### Parameters and Values
 
 #### Description
