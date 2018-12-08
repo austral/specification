@@ -52,7 +52,7 @@ h4 {
     margin: 15px 0;
 }
 
-section p {
+section p, section li, section dt, section dd {
     font-size: 23px;
 }
 
