@@ -92,4 +92,12 @@ from C.
 
 ### `address-of`
 
+#### Syntax
+
+#### Parameters and Values
+
+#### Descriptions
+
+#### Examples
+
 ### `size-of`
