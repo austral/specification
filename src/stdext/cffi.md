@@ -228,6 +228,10 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Syntax
 
+```
+(address-offset <paddress> <offset>) ;; => <result>
+```
+
 #### Parameters and Values
 
 #### Description
