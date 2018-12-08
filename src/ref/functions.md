@@ -55,7 +55,7 @@ See [this section](#fn:concrete-examples).
 #### Parameters and Values
 
 `name`
-: The interface name.
+: The typeclass name.
 
 `type`
 : A type parameter name.
