@@ -234,6 +234,15 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Parameters and Values
 
+`paddress`
+:   A positive address.
+
+`offset`
+:   An offset of type `usize`.
+
+`result`
+:   A positive address.
+
 #### Description
 
 #### Examples
