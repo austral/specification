@@ -117,7 +117,13 @@ If allocation fails for whatever reason, a null pointer is returned.
 
 #### Syntax
 
+```
+(free <paddress>)
+```
+
 #### Parameters and Values
+
+
 
 #### Description
 
