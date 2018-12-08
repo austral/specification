@@ -154,6 +154,12 @@ deallocates the memory stored there. It returns `nil`.
 
 #### Parameters and Values
 
+`paddress`
+:   The positive address to dereference.
+
+`value`
+:   The value at the given memory location.
+
 #### Description
 
 #### Examples
