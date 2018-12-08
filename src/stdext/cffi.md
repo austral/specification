@@ -257,11 +257,12 @@ More concretely, the result is:
 
 #### Examples
 
-Let `p` be a positive address of type `(paddress i32)`, which points to a memory
-location holding ten contiguous `i32` integers. Then:
+Let `p` be a positive address of type `(paddress i32)`. Then:
 
 ```
-(load (address-offset p 5)) ;; => i32
+(let ((p' (address-offset p 5)))
+  (store p' 10)
+  (load p')) ;; => i32
 ```
 
 ### `address-of`
