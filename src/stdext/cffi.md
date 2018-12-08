@@ -6,9 +6,29 @@ from C.
 
 ### `address`
 
+#### Type Specifier
+
+#### Parameters
+
+#### Description
+
 ### `paddress`
 
+#### Type Specifier
+
+#### Parameters
+
+#### Description
+
 ### `defcfun`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Descriptions
+
+#### Examples
 
 ### `null-pointer`
 
