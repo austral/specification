@@ -122,3 +122,13 @@ from C.
 The `size-of` SPECIALOP returns the size of the given type in bytes.
 
 #### Examples
+
+```
+(size-of u8)  ;; => 1
+(size-of u16) ;; => 2
+(size-of i64) ;; => 8
+
+(size-of f64) ;; => 8
+
+(size-of (tuple u8 u8 u8)) ;; => 4
+```
