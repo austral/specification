@@ -52,6 +52,14 @@ from C.
 
 ### `free`
 
+#### Syntax
+
+#### Parameters and Values
+
+#### Descriptions
+
+#### Examples
+
 ### `load`
 
 ### `store`
