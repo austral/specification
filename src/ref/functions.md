@@ -88,9 +88,9 @@ See [this section](#fn:class-examples).
 
 #### See Also
 
-- [`defimplementation`](#op:defimplementation)
+- [`definstance`](#op:definstance)
 
-### `defimplementation` {#op:defimplementation}
+### `definstance` {#op:definstance}
 
 #### Syntax
 
@@ -98,7 +98,7 @@ See [this section](#fn:class-examples).
 
 #### Description
 
-The `defimplementation` SPECIALOP defines an implementation of
+The `definstance` SPECIALOP defines an implementation of
 an [interface](#type:interface).
 
 #### Examples
