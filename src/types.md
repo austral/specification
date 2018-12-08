@@ -314,33 +314,3 @@ operator.
 #### Parameters
 
 #### Description
-
-### Refinement Types
-
-#### Type Specifier
-
-#### Parameters
-
-#### Description
-
-### Units of Measure
-
-#### Type Specifier
-
-```
-(unit <type> <unit>)
-```
-
-#### Parameters
-
-`type`
-: A type specifier.
-
-`unit`
-: A unit specifier.
-
-#### Description
-
-Units of measure and the magnitudes they measure are defined with
-the [`defunit`](#op:defunit) and [`defmagnitude`](#op:defmagnitude) special
-operators.
