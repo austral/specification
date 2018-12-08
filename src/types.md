@@ -175,79 +175,7 @@ A reference acts as a pointer without the affine restriction, but with the added
 restriction that it is tagged with a region identifier that prevents memory
 safety violations.
 
-### Arrays
 
-#### Fixed-Size Arrays {#type:fixed-size-array}
-
-##### Type Specifier
-
-```
-(array <type> <size>)
-```
-
-##### Parameters
-
-`type`
-: The type of the array's elements.
-
-`size`
-: The array's length, a positive integer literal.
-
-##### Description
-
-A fixed-size array is an ordered collection of values whose size is known at
-compile time.
-
-#### Fixed-Capacity Arrays
-
-##### Type Specifier
-
-```
-(carray <type> <capacity>)
-```
-
-##### Parameters
-
-`type`
-: The type of the array's elements.
-
-`capacity`
-: The array's capacity, a positive integer literal.
-
-##### Description
-
-#### Resizeable Arrays
-
-##### Type Specifier
-
-```
-(varray <type>)
-```
-
-##### Parameters
-
-`type`
-: The type of the array's elements.
-
-##### Description
-
-A resizeable array is an affine, heap-allocated ordered collection of values.
-
-### Strings
-
-#### Type Specifier
-
-```
-string
-```
-
-#### Parameters
-
-None.
-
-#### Description
-
-The `string` type is the type of string literals.
 
 ### Tuples
 
