@@ -99,29 +99,6 @@ The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-
-### References {#type:reference}
-
-#### Syntax
-
-```
-(reference <type> <region>)
-```
-
-#### Parameters
-
-`type`
-: The referenced type.
-
-`region`
-: The name of the region.
-
-#### Description
-
-A reference acts as a pointer without the affine restriction, but with the added
-restriction that it is tagged with a region identifier that prevents memory
-safety violations.
-
 ### Static Arrays
 
 #### Type Specifier
