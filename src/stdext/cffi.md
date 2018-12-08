@@ -101,3 +101,11 @@ from C.
 #### Examples
 
 ### `size-of`
+
+#### Syntax
+
+#### Parameters and Values
+
+#### Descriptions
+
+#### Examples
