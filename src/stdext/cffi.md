@@ -95,10 +95,16 @@ from C.
 #### Syntax
 
 ```
-(address-of <var>) ;; <paddress>
+(address-of <var>) ;; => <paddress>
 ```
 
 #### Parameters and Values
+
+`var`
+:   A variable name, a SYMBOL.
+
+`paddress`
+:   The (positive) address where the variable's value is stored on the stack.
 
 #### Description
 
