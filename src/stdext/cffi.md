@@ -26,7 +26,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -36,7 +36,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -46,7 +46,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -56,7 +56,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -66,7 +66,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -76,7 +76,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -86,7 +86,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -96,7 +96,7 @@ from C.
 
 #### Parameters and Values
 
-#### Descriptions
+#### Description
 
 #### Examples
 
@@ -113,6 +113,6 @@ from C.
 `type`
 :   A type specifier.
 
-#### Descriptions
+#### Description
 
 #### Examples
