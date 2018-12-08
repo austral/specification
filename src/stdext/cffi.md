@@ -70,6 +70,13 @@ The `null-pointer` SPECIALOP returns the address of the null pointer.
 
 #### Examples
 
+In the following example, the variable `p` has type `(address i32)`:
+
+```
+(let ((p (null-pointer i32)))
+  (some-foreign-function p))
+```
+
 ### `malloc`
 
 #### Syntax
