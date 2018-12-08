@@ -17,6 +17,13 @@ body {
     font-size: 1.5em;
 }
 
+/* General Layout */
+
+body {
+    margin: 0 auto;
+    width: 80%;
+}
+
 /* Frontmatter */
 
 #title-block-header {
@@ -28,9 +35,11 @@ body {
 
 #TOC {
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
 }
 
 #TOC ul {
     list-style-type: none;
 }
+
+/* Body */
