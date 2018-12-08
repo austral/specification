@@ -3,7 +3,7 @@ sudo: false
 
 install:
   - sudo apt-get install -y make m4
-  - curl -o pandoc.deb https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
+  - curl -L -o pandoc.deb https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
   - sudo dpkg -i pandoc.deb
 
 script:
