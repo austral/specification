@@ -1,5 +1,7 @@
 # Austral Specification
 
+[![Build Status](https://travis-ci.org/austral/specification.svg?branch=master)](https://travis-ci.org/austral/specification)
+
 This repository contains the source text of the Austral specification.
 
 ## Building
