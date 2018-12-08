@@ -16,6 +16,12 @@ body {
 /* Frontmatter */
 
 #title-block-header {
-    margin: 30px;
+    margin: 30vh auto;
     text-align: center;
+}
+
+/* Table of Contents */
+
+#TOC {
+    margin: 0 auto;
 }
