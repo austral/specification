@@ -6,7 +6,7 @@ PDF_OUT  := $(BUILD)/spec.pdf
 
 CSS := style.css
 
-PANDOC_FLAGS := --standalone --self-contained --table-of-contents --toc-depth=4 --variable urlcolor=cyan
+PANDOC_FLAGS := --standalone --self-contained --section-divs --table-of-contents --toc-depth=4 --variable urlcolor=cyan
 INPUT_FORMAT := markdown+smart
 
 MACROS := macros.m4
