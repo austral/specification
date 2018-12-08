@@ -16,6 +16,14 @@ To generate the PDF version, run:
 $ make pdf
 ```
 
+## Requirements
+
+Building the spec requires:
+
+- m4
+- [Pandoc](https://pandoc.org/)
+- make
+
 # License
 
 Copyright 2017-2018 Fernando Borretti.
