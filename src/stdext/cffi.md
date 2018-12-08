@@ -130,5 +130,9 @@ The `size-of` SPECIALOP returns the size of the given type in bytes.
 
 (size-of f64) ;; => 8
 
-(size-of (tuple u8 u8 u8)) ;; => 4
+(size-of (tuple u8 u8 u8)) ;; => 3
 ```
+
+#### Notes
+
+The return value of `size-of` for a given type is implementation-defined.
