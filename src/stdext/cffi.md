@@ -107,7 +107,7 @@ If allocation fails for whatever reason, a null pointer is returned.
 
 ```
 (defun can-allocate-successfully () boolean
-  (let ((addr (malloc i32 4)))
+  (let ((addr (malloc i32 (the usize 10))))
     (if (eq addr (null-pointer i32))
         false
         true)))
@@ -118,7 +118,7 @@ If allocation fails for whatever reason, a null pointer is returned.
 #### Syntax
 
 ```
-(free <paddress>)
+(free <paddress>) ;; => nil
 ```
 
 #### Parameters and Values
@@ -128,7 +128,21 @@ If allocation fails for whatever reason, a null pointer is returned.
 
 #### Description
 
+The `free` generic function takes a positive address as its argument and
+deallocates the memory stored there. It returns `nil`.
+
 #### Examples
+
+```
+(let ((addr (malloc i32 (the usize 1))))
+  (case (paddress? addr)
+    ((some paddr)
+     ;; Allocation succeeded, so we can call free
+     (free paddr))
+    (none
+     ;; Allocation failed, so do nothing
+     nil)))
+```
 
 ### `load`
 
