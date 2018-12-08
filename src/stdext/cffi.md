@@ -110,12 +110,12 @@ from C.
 #### Description
 
 The `address-of` SPECIALOP takes a variable name as its input and returns the
-positive address where that variable's value is stored on the stack. This is
-mainly useful for C functions that take a pointer as an argument and write to
-that pointer instead of returning a new heap-allocated value: this allows
-passing a pointer to a stack-allocated value rather than allocating a new value
-on the heap. In hot loops this reduction in memory pressure can save a great
-deal of time.
+[positive address](#cffi:paddress) where that variable's value is stored on the
+stack. This is mainly useful for C functions that take a pointer as an argument
+and write to that pointer instead of returning a new heap-allocated value: this
+allows passing a pointer to a stack-allocated value rather than allocating a new
+value on the heap. In hot loops this reduction in memory pressure can save a
+great deal of time.
 
 #### Examples
 
