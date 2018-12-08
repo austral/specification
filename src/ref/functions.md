@@ -38,12 +38,12 @@ provide the function definition.
 
 See [this section](#fn:concrete-examples).
 
-### `definterface` {#op:definterface}
+### `defclass` {#op:defclass}
 
 #### Syntax
 
 ```
-(definterface <name> (<type>)
+(defclass <name> (<type>)
   [<documentation>]
   (<generic-function>*))
 
@@ -80,11 +80,11 @@ See [this section](#fn:concrete-examples).
 
 #### Description
 
-The `definterface` SPECIALOP defines an [interface](#type:interface).
+The `defclass` SPECIALOP defines an [interface](#type:interface).
 
 #### Examples
 
-See [this section](#fn:interface-examples).
+See [this section](#fn:class-examples).
 
 #### See Also
 
@@ -103,11 +103,11 @@ an [interface](#type:interface).
 
 #### Examples
 
-See [this section](#fn:interface-examples).
+See [this section](#fn:class-examples).
 
 #### See Also
 
-- [`definterface`](#op:definterface)
+- [`defclass`](#op:defclass)
 
 ### `fn` ### {#op:fn}
 

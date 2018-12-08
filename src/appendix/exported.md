@@ -11,7 +11,7 @@
 - `or`
 - `not`
 - `defun`
-- `definterface`
+- `defclass`
 - `defimplementation`
 - `deftype`
 - `defrecord`

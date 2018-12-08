@@ -8,7 +8,7 @@ The following special forms can only appear at the toplevel:
 - [`in-module`](#op:in-module)
 - [`defconstant`](#op:defconstant)
 - [`defun`](#op:defun)
-- [`definterface`](#op:definterface)
+- [`defclass`](#op:defclass)
 - [`defimplementation`](#op:defimplementation)
 - [`deftype`](#op:deftype)
 - [`defrecord`](#op:defrecord)

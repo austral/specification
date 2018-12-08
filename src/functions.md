@@ -96,14 +96,13 @@ A more extensively documented, equivalent function:
 
 ### Examples
 
-## Interfaces and Implementations ## {#fn:interface}
+## Typeclasses ## {#fn:class}
 
-Interfaces and implementations are similar to typeclasses in Haskell and traits
-in Rust.
+Typeclasses in Austral are similar to typeclasses in Haskell 98.
 
-An interface has one, and only one, type parameter.
+A typeclass has one, and only one, type parameter.
 
-When defining an implementation, the supplied type argument must be one of:
+When defining a typeclass instance, the supplied type argument must be one of:
 
 1. A concrete type specifier.
 2. A type variable.
@@ -111,21 +110,11 @@ When defining an implementation, the supplied type argument must be one of:
 
 These restrictions are similar to those of Haskell 98 typeclasses.
 
-### Examples ### {#fn:interface-examples}
+### Examples ### {#fn:class-examples}
 
-A bare definition of an interface for objects that can be printed to a stream:
-
-```
-(definterface printable (type)
-  ((print ((instance type) (stream stream)))))
-```
-
-A definition with more documentation strings:
+A bare definition of a typeclass for objects that can be printed to a stream:
 
 ```
-(definterface printable (type)
-  (:documentation "Printable objects.")
-
-  ((print ((instance type) (stream stream))
-    (:documentation "Print a representation of instance to stream."))))
+(defclass printable (type)
+  (print ((instance type) (stream stream)) unit))
 ```
