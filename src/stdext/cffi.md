@@ -194,6 +194,9 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Description
 
+The `store` generic function takes a positive address and a value and stores the
+value at that address. The value is returned.
+
 #### Examples
 
 ### `address-offset`
