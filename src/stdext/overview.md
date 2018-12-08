@@ -19,3 +19,7 @@ cases and when adding support for a future implementation.
 
 Austral Standard Extensions aim to solve this problem by specifying the API of
 optional language features.
+
+Implementations that implement a standard extension may additionally implement
+an alternative, more featureful API, but this must be entirely disjoint from the
+API defined in the standard extension documentation.
