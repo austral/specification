@@ -9,7 +9,7 @@ The following special forms can only appear at the toplevel:
 - [`defconstant`](#op:defconstant)
 - [`defun`](#op:defun)
 - [`defclass`](#op:defclass)
-- [`defimplementation`](#op:defimplementation)
+- [`definstance`](#op:definstance)
 - [`deftype`](#op:deftype)
 - [`defrecord`](#op:defrecord)
 - [`defdisjunction`](#op:defdisjunction)
