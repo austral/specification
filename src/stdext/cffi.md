@@ -87,7 +87,21 @@ In the following example, the variable `p` has type `(address i32)`:
 
 #### Parameters and Values
 
+`type`
+:   The type to allocate.
+
+`count`
+:   The number of instances of `type` to allocate contiguously, of type `usize`.
+
+`address`
+:   The address of the allocated memory, which is potentially null.
+
 #### Description
+
+The `malloc` SPECIALOP takes a `type` and a `count` of type `usize`, and
+attempts to allocate at least enough bytes to hold `(* (size-of type) count)`.
+
+If allocation fails for whatever reason, a null pointer is returned.
 
 #### Examples
 
