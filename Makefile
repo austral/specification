@@ -40,7 +40,8 @@ SOURCES := src/book.md \
 	   src/ref/features.md \
 	   src/documentation.md \
 	   src/appendix/glossary.md \
-	   src/appendix/exported.md
+	   src/appendix/exported.md \
+           src/appendix/license.md
 
 .DEFAULT_GOAL := all
 
