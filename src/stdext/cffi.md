@@ -204,6 +204,12 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 `value`
 :   The value to store at the given address.
 
+#### Type Signature
+
+```
+forall tau, ((paddress tau) tau) -> tau
+```
+
 #### Description
 
 The `store` generic function takes a positive address and a value and stores the
