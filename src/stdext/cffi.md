@@ -53,7 +53,7 @@ The `paddress` type represents a positive (that is, non-null) address in memory.
 #### Syntax
 
 ```
-(null-pointer <type>) ;; => <address>
+(null-pointer <type>) ;; => <address> : (address <type>)
 ```
 
 #### Parameters and Values
@@ -65,6 +65,8 @@ The `paddress` type represents a positive (that is, non-null) address in memory.
 :   The address of the null pointer.
 
 #### Description
+
+The `null-pointer` SPECIALOP returns the address of the null pointer.
 
 #### Examples
 
