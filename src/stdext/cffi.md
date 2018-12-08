@@ -104,7 +104,8 @@ from C.
 :   A variable name, a SYMBOL.
 
 `paddress`
-:   The (positive) address where the variable's value is stored on the stack.
+:   The [positive address](#cffi:paddress) where the variable's value is stored
+    on the stack.
 
 #### Description
 
