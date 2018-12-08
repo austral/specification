@@ -65,11 +65,11 @@ $(PDF_OUT): $(TMP1)
 		-V mainfont="Times New Roman" \
 		-o $@
 
-html: $(HTML_OUT)
+html: $(BUILD) $(HTML_OUT)
 
-pdf: $(PDF_OUT)
+pdf: $(BUILD) $(PDF_OUT)
 
-all: $(BUILD) html
+all: html
 
 clean:
 	rm -rf $(BUILD)
