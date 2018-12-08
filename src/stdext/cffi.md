@@ -162,6 +162,11 @@ deallocates the memory stored there. It returns `nil`.
 
 #### Description
 
+The `load` generic function takes a positive address as its input, attempts to
+dereference it, and returns the value stored at that address.
+
+If the address is not dereferenceable, the consequences are undefined.
+
 #### Examples
 
 ### `store`
