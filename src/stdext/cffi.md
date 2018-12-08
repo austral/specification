@@ -243,6 +243,12 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 `result`
 :   A positive address.
 
+#### Type Signature
+
+```
+forall tau, ((paddress tau) usize) -> (paddress tau)
+```
+
 #### Description
 
 The `address-offset` generic function takes a positive address to a type `tau`
