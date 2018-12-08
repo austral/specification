@@ -1,8 +1,8 @@
 /* Typography */
 
 body {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
+    font-family: 'Lusitana';
+    font-size: 18px;
 }
 
 #title-block-header h1 {
@@ -10,11 +10,15 @@ body {
 }
 
 #title-block-header .author {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 #TOC {
-    font-size: 1.5em;
+    font-size: 1.3em;
+}
+
+p {
+    font-size: 1.2em;
 }
 
 /* General Layout */
@@ -34,7 +38,9 @@ body {
 /* Table of Contents */
 
 #TOC {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
     width: 60%;
 }
 
