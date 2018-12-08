@@ -1,7 +1,7 @@
 /* Typography */
 
 body {
-    font-family: 'Lusitana';
+    font-family: 'Lusitana', serif;
     font-size: 18px;
 }
 
@@ -22,7 +22,7 @@ p {
 }
 
 code {
-    font-family: 'Inconsolata';
+    font-family: 'Inconsolata', monospace;
 }
 
 /* General Layout */
