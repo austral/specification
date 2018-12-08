@@ -123,7 +123,8 @@ If allocation fails for whatever reason, a null pointer is returned.
 
 #### Parameters and Values
 
-
+`paddress`
+:   The positive address to deallocate.
 
 #### Description
 
