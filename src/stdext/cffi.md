@@ -19,6 +19,8 @@ from C.
 
 #### Description
 
+The `address` type represents a potentially null address in memory.
+
 ### `paddress` ### {#cffi:paddress}
 
 #### Type Specifier
