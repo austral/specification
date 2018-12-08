@@ -105,7 +105,7 @@ from C.
 #### Syntax
 
 ```
-(size-of <type>)
+(size-of <type>) ;; => <size> : usize
 ```
 
 #### Parameters and Values
@@ -113,6 +113,12 @@ from C.
 `type`
 :   A type specifier.
 
+`size`
+
+:   The size of `type` in bytes.
+
 #### Description
+
+The `size-of` SPECIALOP returns the size of the given type in bytes.
 
 #### Examples
