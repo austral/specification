@@ -126,6 +126,12 @@ If allocation fails for whatever reason, a null pointer is returned.
 `paddress`
 :   The positive address to deallocate.
 
+#### Type Signature
+
+```
+forall tau, ((paddress tau)) -> unit
+```
+
 #### Description
 
 The `free` generic function takes a positive address as its argument and
