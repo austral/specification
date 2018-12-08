@@ -52,6 +52,10 @@ The `paddress` type represents a positive (that is, non-null) address in memory.
 
 #### Syntax
 
+```
+(null-pointer <type>) ;; => <address>
+```
+
 #### Parameters and Values
 
 #### Description
