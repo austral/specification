@@ -80,7 +80,7 @@ See [this section](#fn:concrete-examples).
 
 #### Description
 
-The `defclass` SPECIALOP defines an [interface](#type:interface).
+The `defclass` SPECIALOP defines a typeclass.
 
 #### Examples
 
