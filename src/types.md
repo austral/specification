@@ -99,26 +99,6 @@ The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-### Fixed Point Numbers
-
-#### Type Specifier
-
-```
-(Q <integer> <fractional>)
-```
-
-#### Parameters
-
-`integer`
-:  The number of integer bits.
-
-`fractional`
-: The number of fractional bits.
-
-#### Description
-
-[TBD]
-
 ### Complex Numbers
 
 #### Type Specifier
