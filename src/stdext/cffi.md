@@ -166,6 +166,8 @@ deallocates the memory stored there. It returns `nil`.
 `value`
 :   The value at the given memory location.
 
+#### Type Signature
+
 ```
 forall tau, ((paddress tau)) -> tau
 ```
