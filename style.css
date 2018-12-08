@@ -9,6 +9,10 @@ body {
     font-size: 3em;
 }
 
+#title-block-header .author {
+    font-size: 1.5em;
+}
+
 /* Frontmatter */
 
 #title-block-header {
