@@ -98,8 +98,7 @@ See [this section](#fn:class-examples).
 
 #### Description
 
-The `definstance` SPECIALOP defines an implementation of
-an [interface](#type:interface).
+The `definstance` SPECIALOP defines an instance of a typeclass.
 
 #### Examples
 
