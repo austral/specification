@@ -61,7 +61,7 @@ See [this section](#fn:concrete-examples).
 : A type parameter name.
 
 `documentation`
-: An optional interface documentation form.
+: An optional typeclass documentation form.
 
 `fn`
 : The name of a generic function.
