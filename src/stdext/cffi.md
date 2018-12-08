@@ -118,6 +118,14 @@ deal of time.
 
 #### Examples
 
+In the following example, `x` is of type `i32` and `(address-of x)` is of type
+`(paddress i32)`.
+
+```
+(let ((x 10))
+  (some-foreign-function (address-of x)))
+```
+
 ### `size-of`
 
 #### Syntax
