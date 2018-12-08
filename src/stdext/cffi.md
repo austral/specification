@@ -104,6 +104,10 @@ from C.
 
 #### Syntax
 
+```
+(size-of <type>)
+```
+
 #### Parameters and Values
 
 #### Descriptions
