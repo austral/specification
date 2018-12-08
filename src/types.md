@@ -175,7 +175,23 @@ A reference acts as a pointer without the affine restriction, but with the added
 restriction that it is tagged with a region identifier that prevents memory
 safety violations.
 
+### Static Arrays
 
+#### Type Specifier
+
+```
+(static-array <type>)
+```
+
+#### Parameters
+
+`type`
+:   The type of the array's elements.
+
+#### Description
+
+Static arrays are immutable, statically allocated arrays. The most common
+example of a static array is string literals.
 
 ### Tuples
 
