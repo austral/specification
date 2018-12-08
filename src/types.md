@@ -99,22 +99,6 @@ The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-### Pointers {#type:pointer}
-
-#### Syntax
-
-```
-(pointer <type>)
-```
-
-#### Parameters
-
-`type`
-: The pointed-to type.
-
-#### Description
-
-A pointer is an affine value representing the memory location of another value.
 
 ### References {#type:reference}
 
