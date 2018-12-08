@@ -110,6 +110,9 @@ from C.
 
 #### Parameters and Values
 
+`type`
+:   A type specifier.
+
 #### Descriptions
 
 #### Examples
