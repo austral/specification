@@ -16,6 +16,12 @@ To generate the PDF version, run:
 $ make pdf
 ```
 
+And as always, to remove build output, run:
+
+```bash
+$ make clean
+```
+
 ## Requirements
 
 Building the spec requires:
