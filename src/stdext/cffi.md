@@ -81,6 +81,10 @@ In the following example, the variable `p` has type `(address i32)`:
 
 #### Syntax
 
+```
+(malloc <type> <count>) ;; => <address>
+```
+
 #### Parameters and Values
 
 #### Description
