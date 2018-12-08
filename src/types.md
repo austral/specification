@@ -14,35 +14,6 @@ and [`defdisjunction`](#op:defdisjunction).
 
 A type specifier is a FORM that denotes a type.
 
-## Type Constraints
-
-## Affine Types
-
-Affine types are types whose values can appear at most once in a term.
-
-### Semantics of Affine Types
-
-1. A variable with an affine type can appear at most once in its scope.
-2. An aggregate type containing an affine type is affine: an array of pointers,
-   a record containing a pointer slot, a tuple containing a pointer, etc. are
-   all affine types.
-
-For example, the following code is invalid, because `x` appears twice:
-
-```
-;; `x` is an array of an affine type
-(do-something (nth x 0))
-(do-something (nth x 1))
-```
-
-Additionally, the following code is invalid, because `x` has been assigned to `y`:
-
-```
-;; x is an value with an affine type
-(let ((y x))
-  (do-something x))
-```
-
 ## Type Equality
 
 Type equality is structural, except for records and disjunctions, which use
