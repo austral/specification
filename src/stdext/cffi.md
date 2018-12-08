@@ -23,6 +23,10 @@ from C.
 
 #### Type Specifier
 
+```
+(address <type>)
+```
+
 #### Parameters
 
 #### Description
