@@ -29,6 +29,9 @@ from C.
 
 #### Parameters
 
+`type`
+:   The referenced type.
+
 #### Description
 
 ### `defcfun`
