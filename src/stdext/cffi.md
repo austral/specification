@@ -166,6 +166,10 @@ deallocates the memory stored there. It returns `nil`.
 `value`
 :   The value at the given memory location.
 
+```
+forall tau, ((paddress tau)) -> tau
+```
+
 #### Description
 
 The `load` generic function takes a positive address as its input, attempts to
