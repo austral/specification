@@ -245,6 +245,16 @@ Let `ptr` be a positive address of type `(paddress i32)`. Then:
 
 #### Description
 
+The `address-offset` generic function takes a positive address to a type `tau`
+and an offset as input and returns a new address displaced by `(* (size-of tau)
+offset)`.
+
+More concretely, the result is:
+
+```
+(+ paddress (* (size-of tau) offset))
+```
+
 #### Examples
 
 ### `address-of`
