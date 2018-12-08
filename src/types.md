@@ -99,23 +99,6 @@ The floating point type denoted by `f32` represents to a single-precision
 floating point number. The type `f64` represents a double-precision floating
 point number.
 
-### Complex Numbers
-
-#### Type Specifier
-
-```
-(complex <type>)
-```
-
-#### Parameters
-
-`type`
-: A real number type specifier.
-
-#### Description
-
-The `type` parameter determines the type of both the real and imaginary parts.
-
 ### Pointers {#type:pointer}
 
 #### Syntax
