@@ -58,6 +58,12 @@ The `paddress` type represents a positive (that is, non-null) address in memory.
 
 #### Parameters and Values
 
+`type`
+:   The type specifier of the pointed-to type.
+
+`address`
+:   The address of the null pointer.
+
 #### Description
 
 #### Examples
