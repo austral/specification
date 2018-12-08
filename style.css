@@ -5,6 +5,10 @@ body {
     font-size: 16px;
 }
 
+#title-block-header h1 {
+    font-size: 3em;
+}
+
 /* Frontmatter */
 
 #title-block-header {
