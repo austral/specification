@@ -94,6 +94,10 @@ from C.
 
 #### Syntax
 
+```
+(address-of <var>) ;; <paddress>
+```
+
 #### Parameters and Values
 
 #### Description
