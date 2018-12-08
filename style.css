@@ -6,7 +6,7 @@
 /* Font choices */
 
 body {
-    font-family: 'Lusitana', serif;
+    font-family: 'Crimson Text', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,8 +51,16 @@ h4 {
     font-size: 2em;
 }
 
-p {
-    font-size: 1.2em;
+h5 {
+    font-size: 1.7em;
+}
+
+section p, section li, section dt, section dl {
+    font-size: 1.3em;
+}
+
+section code {
+    font-size: 0.9em;
 }
 
 /* General Layout */
