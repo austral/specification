@@ -148,6 +148,10 @@ deallocates the memory stored there. It returns `nil`.
 
 #### Syntax
 
+```
+(load <paddress>) ;; => <value>
+```
+
 #### Parameters and Values
 
 #### Description
