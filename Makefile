@@ -40,7 +40,7 @@ SOURCES := src/book.md \
 	   src/ref/features.md \
 	   src/documentation.md \
            src/stdext/overview.md \
-           src/stdext/cffi.md
+           src/stdext/cffi.md \
 	   src/appendix/glossary.md \
 	   src/appendix/exported.md \
            src/appendix/license.md
