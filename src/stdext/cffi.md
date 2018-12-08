@@ -105,6 +105,14 @@ If allocation fails for whatever reason, a null pointer is returned.
 
 #### Examples
 
+```
+(defun can-allocate-successfully () boolean
+  (let ((addr (malloc i32 4)))
+    (if (eq addr (null-pointer i32))
+        false
+        true)))
+```
+
 ### `free`
 
 #### Syntax
