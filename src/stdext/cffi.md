@@ -8,7 +8,14 @@ from C.
 
 #### Type Specifier
 
+```
+(address <type>)
+```
+
 #### Parameters
+
+`type`
+:   The referenced type.
 
 #### Description
 
