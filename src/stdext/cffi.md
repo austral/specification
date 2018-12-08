@@ -169,6 +169,13 @@ If the address is not dereferenceable, the consequences are undefined.
 
 #### Examples
 
+Let `ptr` be a positive address of type `(paddress i32)`. Then:
+
+```
+(store ptr 10)
+(load ptr) ;; => 10
+```
+
 ### `store`
 
 #### Syntax
