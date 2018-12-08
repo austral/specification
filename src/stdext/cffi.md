@@ -217,6 +217,13 @@ value at that address. The value is returned.
 
 #### Examples
 
+Let `ptr` be a positive address of type `(paddress i32)`. Then:
+
+```
+(store ptr 10)
+(load ptr) ;; => 10
+```
+
 ### `address-offset`
 
 #### Syntax
