@@ -38,7 +38,7 @@ Building the spec requires:
 
 # License
 
-Copyright 2017-2018 Fernando Borretti.
+Copyright 2017-2019 Fernando Borretti.
 
 Licensed under the GNU Free Documentation License. See the COPYING file for
 details.
