@@ -1,5 +1,2 @@
----
-title: The Austral Language Specification
-author:
-  - Fernando Borretti
----
+%title: The Austral Language Specification
+%author Fernando Borretti
