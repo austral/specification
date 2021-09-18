@@ -4,23 +4,15 @@ This repository contains the source text of the Austral specification.
 
 ## Building
 
-To generate the HTML version of the spec, run:
+To generate the PDF version of the spec, run:
 
 ```bash
 $ make
 ```
 
-The result will be the `build/spec.html` file.
+The result is a `spec.pdf` file.
 
-To generate the PDF version, run:
-
-```bash
-$ make pdf
-```
-
-The result will be the `build/spec.pdf` file.
-
-And as always, to remove build output, run:
+To remove build output:
 
 ```bash
 $ make clean
