@@ -1,7 +1,5 @@
 # Austral Specification
 
-[![Build Status](https://travis-ci.org/austral/specification.svg?branch=master)](https://travis-ci.org/austral/specification)
-
 This repository contains the source text of the Austral specification.
 
 ## Building
@@ -27,14 +25,6 @@ And as always, to remove build output, run:
 ```bash
 $ make clean
 ```
-
-## Requirements
-
-Building the spec requires:
-
-- m4
-- [Pandoc](https://pandoc.org/)
-- make
 
 # License
 

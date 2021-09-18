@@ -1,3 +1,0 @@
-## Effects
-
-### `defeffect` {#op:defeffect}
