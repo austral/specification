@@ -1,5 +1,7 @@
 # Austral Specification
 
+![Build status badge](https://github.com/austral/specification/actions/workflows/build.yml/badge.svg)
+
 This repository contains the source text of the [Austral][aus] specification.
 
 This is a work in progress.

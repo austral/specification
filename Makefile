@@ -16,10 +16,20 @@ SOURCES := spec.md \
 
 PANDOC_FLAGS := --standalone --self-contained --section-divs --table-of-contents --toc-depth=3
 
-spec.pdf: $(SOURCES)
-	pandoc $(SOURCES) $(PANDOC_FLAGS) \
-		-t latex \
-		-o spec.pdf
+OUTPUT_PDF := spec.pdf
+OUTPUT_HTML := spec.html
+
+default: pdf html
+
+pdf: $(OUTPUT_PDF)
+
+html: $(OUTPUT_HTML)
+
+$(OUTPUT_HTML): $(SOURCES)
+	pandoc $(SOURCES) $(PANDOC_FLAGS) -t html -o $(OUTPUT_HTML)
+
+$(OUTPUT_PDF): $(SOURCES)
+	pandoc $(SOURCES) $(PANDOC_FLAGS) -t latex -o $(OUTPUT_PDF)
 
 clean:
-	rm spec.pdf
+	rm spec.pdf; rm spec.html
