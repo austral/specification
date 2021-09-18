@@ -16,13 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install system dependencies
-        run: sudo apt-get install pandoc make texlive-latex-base
-
-      - name: Initialize tlmgr
-        run: tlmgr init-usertree
-
-      - name: Install TeX dependencies
-        run: tlmgr install pdftexcmds
+        run: sudo apt-get install pandoc make texlive-full
 
       - name: Build
         run: make
