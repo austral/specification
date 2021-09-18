@@ -14,8 +14,12 @@ SOURCES := spec.md \
 	   src/9.style.md \
 	   src/appendix-a.md
 
+PANDOC_FLAGS := --standalone --self-contained --section-divs --table-of-contents --toc-depth=3
+
 spec.pdf: $(SOURCES)
-	pandoc $(SOURCES) -t latex --toc -o spec.pdf
+	pandoc $(SOURCES) $(PANDOC_FLAGS) \
+		-t latex \
+		-o spec.pdf
 
 clean:
 	rm spec.pdf
