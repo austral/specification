@@ -20,7 +20,7 @@ To remove build output:
 $ make clean
 ```
 
-# License
+## License
 
 Copyright 2017–2021 Fernando Borretti.
 
