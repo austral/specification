@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: sudo apt-get install pandoc make pdflatex
+        run: sudo apt-get install pandoc make texlive-latex-base
 
       - name: Build
         run: make
