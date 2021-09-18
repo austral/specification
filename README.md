@@ -22,6 +22,29 @@ To remove build output:
 $ make clean
 ```
 
+## Status
+
+1. Introduction ⚪⚪⚪
+2. Rationale ⚪⚪⚪
+    1. Syntax ⚪⚪⚪
+    2. Error Handling ⚪⚪⚪
+    3. Resource-Aware Type System ⚪⚪⚪
+4. Syntax ⚪⚪⚪
+5. Module System ⚪⚪⚪
+6. Type System ⚪⚪⚪
+7. Declarations ⚪⚪⚪
+8. Statements ⚪⚪⚪
+9. Expressions ⚪⚪⚪
+10. Examples ⚪⚪⚪
+11. Style ⚪⚪⚪
+
+Key:
+
+- ⚪⚪⚪: Not started
+- 🟡⚪⚪: Preliminary.
+- 🔵🔵⚪: In progress.
+- 🟢🟢🟢 : Completed
+
 ## License
 
 Copyright 2017–2021 Fernando Borretti.
