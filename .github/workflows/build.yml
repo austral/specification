@@ -15,8 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Install system dependencies
         run: sudo apt-get install pandoc make texlive-latex-base
+
+      - name: Install TeX dependencies
+        run: tlmgr install pdftexcmds
 
       - name: Build
         run: make
