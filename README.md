@@ -28,7 +28,7 @@ $ make clean
 
 # License
 
-Copyright 2017–2019 Fernando Borretti.
+Copyright 2017–2021 Fernando Borretti.
 
 Licensed under the GNU Free Documentation License. See the COPYING file for
 details.
